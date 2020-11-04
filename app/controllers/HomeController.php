@@ -1,12 +1,16 @@
 <?php
 
-class HomeController {
+class HomeController extends Controller 
+{
 
-    public function index() {
-        echo "I am in class: " . __CLASS__ . " calling method: " . __METHOD__;
+    public function index() 
+    {
+        $this->view('index');
+        $this->view->render();
     }
     
-    public function about() {
+    public function about() 
+    {
         echo "I am in class: " . __CLASS__ . " calling method: " . __METHOD__;
     }
 }
