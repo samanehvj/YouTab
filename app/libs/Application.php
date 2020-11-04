@@ -1,11 +1,13 @@
 <?php
 
-class Application {
+class Application 
+{
     protected $controller = 'HomeController';
     protected $action = 'index';
     protected $params = [];
 
-    public function __construct() {  
+    public function __construct() 
+    {  
 
         $this->setup();
 
@@ -18,7 +20,8 @@ class Application {
         }
     }
 
-    protected function setup() {
+    protected function setup() 
+    {
         $request = trim($_SERVER['REQUEST_URI'], '/');
         $url = [];
   
@@ -44,15 +47,18 @@ class Application {
         }
     }
 
-    protected function setController($controller) {
+    protected function setController($controller) 
+    {
         $this->controller = ucfirst($controller) . 'Controller';
     }
 
-    protected function setAction($action) {
+    protected function setAction($action) 
+    {
         $this->action = $action;
     }
 
-    protected function setParams($params) {
+    protected function setParams($params) 
+    {
         $this->params = array_values($params);
     }
 
