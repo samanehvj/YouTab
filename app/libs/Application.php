@@ -6,21 +6,16 @@ class Application {
     protected $params = [];
 
     public function __construct() {  
-        echo "<pre>";
-        
-        // var_dump($_SERVER);  
-        $this->setup();
-        echo $this->controller . '->';
-        echo $this->action . '(';
-        foreach($this->params as $key => $param) {
-            if($key == 0)
-                echo $param;
-            else   
-                echo ', ' . $param;
-        }
-        echo ')';
 
-        echo '</pre>';
+        $this->setup();
+
+        if(file_exists(CONTROLLER . $this->controller . '.php')) {
+            $this->controller = new $this->controller;
+
+            if(method_exists($this->controller, $this->action)){
+                call_user_func_array([$this->controller, $this->action], $this->params);
+            }
+        }
     }
 
     protected function setup() {
