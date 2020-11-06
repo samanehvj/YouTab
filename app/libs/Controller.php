@@ -4,7 +4,7 @@ class Controller
 {
     protected $view;
 
-    public function view($viewFile, $viewData = []) 
+    public function setView($viewFile, $viewData = []) 
     {
         $this->view = new View($viewFile, $viewData);
         return $this->view;
