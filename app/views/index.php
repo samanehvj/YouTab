@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hello from Index in view</h1>
-</body>
-</html>
+<?php include VIEW . 'layouts/header.php' ?>
+
+<h1>Welcome to YouTab Home Page</h1>
+<p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto iure tenetur facere, sed inventore voluptates distinctio, atque, quisquam alias deleniti porro quidem praesentium eum dolor ipsum nam? Explicabo, aliquam omnis.
+</p>
+
+<?php include VIEW . 'layouts/footer.php' ?>
