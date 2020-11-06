@@ -16,15 +16,22 @@ class Application
 
             if(method_exists($this->controller, $this->action)){
                 call_user_func_array([$this->controller, $this->action], $this->params);
+            } else {
+                $this->controller = new HomeController();
+                $this->action = 'pageNotFound';
+                call_user_func_array([$this->controller, $this->action], []);
             }
+        } else {
+            $this->controller = new HomeController();
+            $this->action = 'pageNotFound';
+            call_user_func_array([$this->controller, $this->action], []);
         }
     }
 
     protected function setup() 
     {
         $request = trim($_SERVER['REQUEST_URI'], '/');
-        $url = [];
-  
+
         if(empty($request)) {
             return;
         }
