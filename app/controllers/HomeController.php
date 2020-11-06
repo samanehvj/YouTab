@@ -5,12 +5,28 @@ class HomeController extends Controller
 
     public function index() 
     {
-        $this->view('index');
+        $this->setView('index');
+        $this->view->pageTitle = SITENAME . " - HOME";
         $this->view->render();
     }
     
     public function about() 
     {
-        echo "I am in class: " . __CLASS__ . " calling method: " . __METHOD__;
+        $this->setView('about');
+        $this->view->pageTitle = SITENAME . " - ABOUT";
+        $this->view->render();
+    }
+
+    public function contact()
+    {
+        $this->setView('contact');
+        $this->view->pageTitle = SITENAME . " - Contact";
+        $this->view->render();
+    }
+
+    public function pageNotFound()
+    {
+        $this->setView('pageNotFound');
+        $this->view->render();
     }
 }
