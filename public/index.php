@@ -1,7 +1,7 @@
 <?php
 
 define('SITENAME', 'YouTab Brand');
-define('URLROOT', 'http://localhost:8888/YouTab');
+define('URLROOT', 'http://localhost:80800');
 
 define('ROOT', dirname(__DIR__) . DIRECTORY_SEPARATOR);
 define('APP', ROOT . 'app' . DIRECTORY_SEPARATOR);
