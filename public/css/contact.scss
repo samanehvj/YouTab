@@ -1,0 +1,140 @@
+@use "variables" as v;
+
+h3 {
+    font-family: "bw quinta pro";
+    font-size:
+    30px;
+}
+
+.head-text{
+    font-family: "bw quinta pro";
+    font-weight: bold;
+
+}
+
+.box {
+    padding: 60px 0px;
+}
+
+.icon{
+font-size: 30px;
+}
+
+
+.icon:hover{
+    font-size: 30px;
+    color: v.$primary_color;
+}
+
+.box-part {
+    background: v.$primary_color;
+    padding: 60px 0px;
+    margin: 30px 0px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    border: 1px solid v.$secondary_color
+}
+
+.box-part:hover {
+    background: v.$secondary_color;
+    border: 2px solid v.$primary_color
+
+}
+
+
+.box-part:hover .fa,
+.box-part:hover .title,
+.box-part:hover .text,
+.box-part:hover a {
+    color: v.$primary_color;
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out
+}
+
+.text {
+    margin: 20px 0px
+}
+
+.fa {
+    color: v.$primary_color;
+}
+
+
+
+/*form start*/
+
+h2 {
+    color: v.$secondary_color;
+}
+
+.text-muted {
+    font-family:"bw quinta pro";
+}
+
+
+
+.contact:hover {
+    background-color: v.$primary_color;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative
+}
+
+form  {
+    background-color: v.$primary_color;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto
+}
+
+input,
+textarea,
+.form-control {
+    outline: none;
+    border: none
+}
+
+textarea#msg:focus {
+    border: 1px solid v.$secondary_color;
+    background-color: v.$primary_color;
+    box-shadow: none;
+}
+
+.input-field {
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 5px
+}
+
+.input-field:hover {
+    border: 2px solid v.$secondary_color;
+    cursor: pointer
+}
+
+label {
+    font-weight: 500
+}
+
+#msg {
+    height: 220px
+}
+
+.btn-contact {
+    background-color: v.$secondary_color;
+    color: v.$primary_color;
+    padding: 10px 10px;
+    width: 200px;
+    margin: 10px auto
+}
+
+.btn-contact:hover {
+    color: v.$secondary_color;
+    padding: 10px 10px;
+    width: 200px;
+    margin: 10px auto;
+    border:2px solid v.$secondary_color;
+    background-color: v.$primary_color;
+}
+

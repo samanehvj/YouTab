@@ -1,8 +1,4 @@
-$primary_color: white;
-$secondary_color: black;
-
-
-
+@use 'variables' as v;
 
 a,
 a:hover,
@@ -14,7 +10,7 @@ a:focus {
 
 .navbar {
   padding: 15px 10px;
-  background: $primary_color;
+  background: v.$primary_color;
   border: none;
   border-radius: 0;
   margin-bottom: 40px;
@@ -54,8 +50,8 @@ img.menu-logo-img {
   left: -250px;
   height: 100vh;
   z-index: 999;
-  background: $secondary_color;
-  color: $primary_color;
+  background: v.$secondary_color;
+  color: v.$primary_color;
   transition: all 0.3s;
   overflow-y: scroll;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
@@ -70,8 +66,8 @@ img.menu-logo-img {
   height: 35px;
   line-height: 35px;
   text-align: center;
-  background: $primary_color;
-  color: $secondary_color;
+  background: v.$primary_color;
+  color: v.$secondary_color;
   position: absolute;
   top: 10px;
   right: 10px;
@@ -82,8 +78,8 @@ img.menu-logo-img {
 }
 
 #dismiss:hover {
-  background: $secondary_color;
-  color: $primary_color;
+  background: v.$secondary_color;
+  color: v.$primary_color;
 }
 
 .overlay {
@@ -103,16 +99,16 @@ img.menu-logo-img {
 
 #sidebar .sidebar-header {
   padding: 20px;
-  background: black;
+  background: v.$secondary_color;
 }
 
 #sidebar ul.components {
   padding: 20px 0;
-  border-bottom: 1px solid $secondary_color;
+  border-bottom: 1px solid v.$secondary_color;
 }
 
 #sidebar ul p {
-  color: $primary_color;
+  color: v.$primary_color;
   padding: 10px;
 }
 
@@ -123,14 +119,14 @@ img.menu-logo-img {
 }
 
 #sidebar ul li a:hover {
-  color: $secondary_color;
-  background: $primary_color;
+  color: v.$secondary_color;
+  background: v.$primary_color;
 }
 
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
-  color: $secondary_color;
-  background: $primary_color;
+  color: v.$secondary_color;
+  background: v.$primary_color;
 }
 
 a[data-toggle="collapse"] {
@@ -148,7 +144,7 @@ a[data-toggle="collapse"] {
 ul ul a {
   font-size: 0.9em !important;
   padding-left: 30px !important;
-  background: $secondary_color;
+  background: v.$secondary_color;
 }
 
 ul.CTAs {
@@ -161,19 +157,19 @@ ul.CTAs a {
   display: block;
   border-radius: 5px;
   margin-bottom: 5px;
-  background-color:$primary_color;
-  color: $secondary_color;
+  background-color: v.$primary_color;
+  color: v.$secondary_color;
 }
 a.Shipping,
 a.return {
-  background: $primary_color!important;
-  color: $secondary_color!important;
+  background: v.$primary_color!important;
+  color: v.$secondary_color!important;
 }
 
 a.Shipping,
 a.Shipping:hover {
-  background: $secondary_color !important;
-  color: $primary_color !important;
+  background: v.$secondary_color !important;
+  color: v.$primary_color !important;
 }
 
 

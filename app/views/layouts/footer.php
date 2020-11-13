@@ -3,7 +3,7 @@
 <!--footer start-->
 <footer class="footer bg-dark py-2">
     <div class="d-flex flex-wrap justify-content-around">
-        <span class="text-light ">Place sticky footer content here.</span>
+        <span class="text-light "> © YouTab 2020. All rights reserved.</span>
         <span class="d-inline-block bg-dark text-light">
                     <a class="p-1 h4" href=""><i class="fab fa-facebook-square text-light"></i></a>
                     <a class="p-1 h4" href=""> <i class="fab fa-instagram-square text-light"></i></a>
