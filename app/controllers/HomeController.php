@@ -29,4 +29,14 @@ class HomeController extends Controller
         $this->setView('pageNotFound');
         $this->view->render();
     }
+
+    public function login()
+    {
+        if ($_SESSION['userIsAdmin'] && !empty($_SESSION['userId'])) {
+            $this->go('home', 'login-admin');
+        } else {
+            $this->setView('login-admin');
+            $this->view->render();
+        }
+    }
 }
