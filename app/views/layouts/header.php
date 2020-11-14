@@ -17,6 +17,9 @@ $action = $this->getAction();
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/contact.css">
 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&display=swap" rel="stylesheet">
+
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 
@@ -36,11 +39,11 @@ $action = $this->getAction();
             <i class="fas fa-arrow-left"></i>
         </div>
 
-        <div class="sidebar-header">
+        <div class="sidebar-header brand-name">
             <h3>YouTab</h3>
         </div>
 
-        <ul class="list-unstyled components">
+        <ul class="list-unstyled components nav-text">
             <li <?= ($action == 'index') ? "class='active'" : '' ?> >
 <!--                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Welcome</a>-->
                 <a href="/home/index" <?= ($action == 'index') ? "class='active'" : '' ?> >Welcome</a>
@@ -71,7 +74,7 @@ $action = $this->getAction();
 
         </ul>
 
-        <ul class="list-unstyled CTAs">
+        <ul class="list-unstyled CTAs nav-text">
             <li>
                 <a href="#" class="return">Return Policy</a>
             </li>
@@ -90,10 +93,10 @@ $action = $this->getAction();
                 <button type="button" id="sidebarCollapse" class="btn btn-dark">
                     <i class="fas fa-align-left"></i>
                 </button>
-
+                <a href="/home/index">
                 <img src="/imgs/logo-black.png" class="img-fluid menu-logo-img">
-
-                <ul class="nav ">
+                </a>
+                <ul class="nav btn-nav ">
                     <li class="d-inline mr-2 active">
                         <a class="d-inline" href="#"><i class="fas fa-user"></i> <span class="menu-shop"> Acount</span></a>
                     </li>
