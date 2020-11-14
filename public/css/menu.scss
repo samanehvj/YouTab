@@ -8,6 +8,27 @@ a:focus {
   transition: all 0.3s;
 }
 
+h3,
+.nav-text
+{
+  font-family: "bw quinta pro";
+
+}
+
+.brand-name h3 {
+  font-family: "LobsterTwo";
+  text-align: center;
+  font-size: 44px;
+  margin-top: 41px;
+  margin-bottom: -24px;
+}
+
+.btn-nav{
+  font-family: "noto sans ";
+  font-size: 17px;
+
+}
+
 .navbar {
   padding: 15px 10px;
   background: v.$primary_color;
