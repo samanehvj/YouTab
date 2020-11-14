@@ -33,9 +33,9 @@ class HomeController extends Controller
     public function login()
     {
         if ($_SESSION['userIsAdmin'] && !empty($_SESSION['userId'])) {
-            $this->go('home', 'login-admin');
+            $this->go('home', 'login');
         } else {
-            $this->setView('login-admin');
+            $this->setView('login');
             $this->view->render();
         }
     }
