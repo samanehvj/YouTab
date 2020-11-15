@@ -2,7 +2,7 @@
 
    <div class="container"> <!--start container-->
 
-       <div class="row my-5"> <!--start row-->
+       <div class="row my-5 product-title"> <!--start row-->
 
            <!-- start row 1  dress-->
 
