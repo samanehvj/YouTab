@@ -52,7 +52,7 @@ $action = $this->getAction();
                 <a href="/home/about"  >About</a>
             </li>
             <li <?= ($action == 'products') ? "class='active'" : '' ?> >
-                <a href="/product/products" >Products</a>
+                <a href="/home/products" >Products</a>
             </li>
             <li <?= ($action == 'contact') ? "class='active'" : '' ?> >
                 <a href="/home/contact" >Contact</a>
