@@ -1,3 +1,4 @@
+/* menu css */
 a,
 a:hover,
 a:focus {
@@ -202,30 +203,29 @@ a.Shipping:hover {
   right: 0;
 }
 
-h3 {
+/* contact css */
+.contact-page {
+  /*form start*/
+}
+.contact-page h3 {
   font-family: "bw quinta pro";
   font-size: 30px;
 }
-
-.head-text {
+.contact-page .head-text {
   font-family: "bw quinta pro";
   font-weight: bold;
 }
-
-.box {
+.contact-page .box {
   padding: 60px 0px;
 }
-
-.icon {
+.contact-page .icon {
   font-size: 30px;
 }
-
-.icon:hover {
+.contact-page .icon:hover {
   font-size: 30px;
   color: white;
 }
-
-.box-part {
+.contact-page .box-part {
   background: white;
   padding: 60px 0px;
   margin: 30px 0px;
@@ -233,95 +233,78 @@ h3 {
   margin-bottom: 25px;
   border: 1px solid black;
 }
-
-.box-part:hover {
+.contact-page .box-part:hover {
   background: black;
   border: 2px solid white;
 }
-
-.box-part:hover .fa,
-.box-part:hover .title,
-.box-part:hover .text,
-.box-part:hover a {
+.contact-page .box-part:hover .fa,
+.contact-page .box-part:hover .title,
+.contact-page .box-part:hover .text,
+.contact-page .box-part:hover a {
   color: white;
   -webkit-transition: all 1s ease-out;
   -moz-transition: all 1s ease-out;
   -o-transition: all 1s ease-out;
   transition: all 1s ease-out;
 }
-
-.text {
+.contact-page .text {
   margin: 20px 0px;
 }
-
-.fa {
+.contact-page .fa {
   color: white;
 }
-
-/*form start*/
-h2 {
+.contact-page h2 {
   color: black;
 }
-
-.text-muted {
+.contact-page .text-muted {
   font-family: "bw quinta pro";
 }
-
-.contact:hover {
+.contact-page .contact:hover {
   background-color: white;
   border-radius: 5px;
   cursor: pointer;
   position: relative;
 }
-
-form {
+.contact-page form {
   background-color: white;
   border-radius: 10px;
   padding: 20px;
   margin: 20px auto;
 }
-
-input,
-textarea,
-.form-control {
+.contact-page input,
+.contact-page textarea,
+.contact-page .form-control {
   outline: none;
   border: none;
 }
-
-textarea#msg:focus {
+.contact-page textarea#msg:focus {
   border: 1px solid black;
   background-color: white;
   box-shadow: none;
 }
-
-.input-field {
+.contact-page .input-field {
   border: 1px solid #ddd;
   padding: 5px;
   border-radius: 5px;
 }
-
-.input-field:hover {
+.contact-page .input-field:hover {
   border: 2px solid black;
   cursor: pointer;
 }
-
-label {
+.contact-page label {
   font-weight: 500;
 }
-
-#msg {
+.contact-page #msg {
   height: 220px;
 }
-
-.btn-contact {
+.contact-page .btn-contact {
   background-color: black;
   color: white;
   padding: 10px 10px;
   width: 200px;
   margin: 10px auto;
 }
-
-.btn-contact:hover {
+.contact-page .btn-contact:hover {
   color: black;
   padding: 10px 10px;
   width: 200px;
@@ -329,20 +312,18 @@ label {
   border: 2px solid black;
   background-color: white;
 }
-
-.about-text {
+.contact-page .about-text {
   font-size: 22px;
   font-family: "noto sans ";
 }
-
-.image-text {
+.contact-page .image-text {
   font-family: "noto sans ";
 }
-
-h1 {
+.contact-page h1 {
   font-family: "bw quinta pro";
 }
 
+/* home css */
 h1,
 .btn-cat {
   font-family: "bw quinta pro";
@@ -361,6 +342,221 @@ h1,
 .product-title {
   font-family: "bw quinta pro";
   font-weight: bold;
+}
+
+/* shopping cart css */
+.cart-page .title {
+  margin-bottom: 8vh;
+  font-family: "bw quinta pro";
+}
+.cart-page .card {
+  margin: auto;
+  max-width: 950px;
+  width: 90%;
+  border: transparent;
+  min-height: 100vh;
+  vertical-align: middle;
+  display: flex;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.cart-page .cart {
+  background-color: white;
+  padding: 4vh 5vh;
+  border-bottom-left-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+.cart-page .summary {
+  padding: 4vh;
+  background-color: lightgray;
+}
+.cart-page .summary .col-2 {
+  padding: 0;
+}
+.cart-page .summary .col-10 {
+  padding: 0;
+}
+.cart-page .row {
+  margin: 0;
+}
+.cart-page .main {
+  margin: 0;
+  padding: 2vh 0;
+  width: 100%;
+}
+.cart-page .col-2,
+.cart-page .col {
+  padding: 0 1vh;
+}
+.cart-page a {
+  padding: 0 1vh;
+}
+.cart-page .close {
+  margin-left: auto;
+  font-size: 0.7rem;
+}
+.cart-page img {
+  width: 3.5rem;
+}
+.cart-page .back-to-shop {
+  margin-top: 4.5rem;
+}
+.cart-page h5 {
+  margin-top: 4vh;
+}
+.cart-page form {
+  padding: 2vh 0;
+}
+.cart-page select {
+  border: 1px solid rgba(0, 0, 0, 0.137);
+  padding: 1.5vh 1vh;
+  margin-bottom: 4vh;
+  outline: none;
+  width: 100%;
+}
+.cart-page input {
+  padding: 1vh;
+  margin-bottom: 4vh;
+  outline: none;
+  width: 100%;
+}
+.cart-page input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+.cart-page .btn {
+  background-color: #000;
+  color: white;
+  width: 100%;
+  font-size: 0.7rem;
+  margin-top: 4vh;
+  padding: 1vh;
+  font-family: "bw quinta pro";
+}
+.cart-page a {
+  color: black;
+}
+.cart-page a:hover {
+  color: black;
+  text-decoration: none;
+}
+@media (max-width: 767px) {
+  .cart-page .card {
+    margin: 3vh auto;
+  }
+}
+@media (max-width: 767px) {
+  .cart-page .cart {
+    padding: 4vh;
+  }
+}
+@media (max-width: 767px) {
+  .cart-page .cart {
+    padding: 4vh;
+  }
+}
+
+/* payment css */
+.payment-page .card {
+  border: none;
+}
+.payment-page .form-control {
+  border-bottom: 2px solid #eee !important;
+  border: none;
+  font-weight: 600;
+}
+.payment-page .form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #8bbafe;
+  outline: 0;
+  box-shadow: none;
+  border-radius: 0px;
+  border-bottom: 2px solid blue !important;
+}
+.payment-page .inputbox {
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.payment-page .inputbox span {
+  position: absolute;
+  top: 7px;
+  left: 11px;
+  transition: 0.5s;
+}
+.payment-page .inputbox i {
+  position: absolute;
+  top: 13px;
+  right: 8px;
+  transition: 0.5s;
+}
+.payment-page input::-webkit-outer-spin-button,
+.payment-page input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.payment-page .inputbox input:focus ~ span {
+  transform: translateX(0px) translateY(-15px);
+  font-size: 12px;
+}
+.payment-page .inputbox input:valid ~ span {
+  transform: translateX(0px) translateY(-15px);
+  font-size: 12px;
+}
+.payment-page .hightlight {
+  background-color: lightgray;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 15px;
+  font-size: 14px;
+}
+.payment-page .decoration {
+  text-decoration: none;
+  font-size: 14px;
+}
+.payment-page .decoration:hover {
+  text-decoration: none;
+  color: #fdcc49;
+}
+
+/* auth css */
+.auth-page {
+  min-height: 80vh;
+}
+.auth-page .bg {
+  background-color: black;
+  color: white;
+}
+.auth-page .login-text h3 {
+  font-size: 30px;
+  margin-top: 20px;
+  font-family: "bw quinta pro";
+}
+
+/* product_detail css */
+.product-detail-page {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+}
+.product-detail-page .product-detail-thumbs {
+  flex-direction: row;
+  overflow-x: scroll;
+  max-width: 100%;
+  max-height: 150px;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+@media screen and (min-width: 768px) {
+  .product-detail-page .product-detail-thumbs {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    max-height: 70vh;
+    overflow-y: scroll;
+  }
+}
+.product-detail-page .product-detail-thumbs::-webkit-scrollbar {
+  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */

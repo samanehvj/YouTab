@@ -1,0 +1,27 @@
+
+/* product_detail css */
+.product-detail-page {
+  .product-detail-thumbs {
+    flex-direction: row;
+    overflow-x: scroll;
+    max-width: 100%;
+    max-height: 150px;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  @media screen and (min-width: 768px) {
+    .product-detail-thumbs {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      max-height: 70vh;
+      overflow-y: scroll;
+
+    }
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .product-detail-thumbs::-webkit-scrollbar {
+    display: none;
+  }
+}

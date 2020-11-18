@@ -1,0 +1,146 @@
+@use "variables" as v;
+/* shopping cart css */
+.cart-page {
+  .title {
+    margin-bottom: 8vh;
+    font-family: "bw quinta pro"
+  }
+
+
+  .card {
+    margin: auto;
+    max-width: 950px;
+    width: 90%;
+    border: transparent;
+    min-height: 100vh;
+    vertical-align: middle;
+    display: flex;
+    font-size: 0.8rem;
+    font-weight: bold
+
+  }
+
+
+  .cart {
+    background-color: v.$primary_color;
+    padding: 4vh 5vh;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem
+  }
+
+
+  .summary {
+
+    padding: 4vh;
+    background-color: lightgray;
+  }
+
+
+  .summary .col-2 {
+    padding: 0
+  }
+
+  .summary .col-10 {
+    padding: 0
+  }
+
+  .row {
+    margin: 0
+  }
+
+
+  .main {
+    margin: 0;
+    padding: 2vh 0;
+    width: 100%
+  }
+
+  .col-2,
+  .col {
+    padding: 0 1vh
+  }
+
+  a {
+    padding: 0 1vh
+  }
+
+  .close {
+    margin-left: auto;
+    font-size: 0.7rem
+  }
+
+  img {
+    width: 3.5rem
+  }
+
+  .back-to-shop {
+    margin-top: 4.5rem
+  }
+
+  h5 {
+    margin-top: 4vh
+  }
+
+
+  form {
+    padding: 2vh 0
+  }
+
+  select {
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    padding: 1.5vh 1vh;
+    margin-bottom: 4vh;
+    outline: none;
+    width: 100%;
+  }
+
+  input {
+    padding: 1vh;
+    margin-bottom: 4vh;
+    outline: none;
+    width: 100%;
+  }
+
+  input:focus::-webkit-input-placeholder {
+    color: transparent
+  }
+
+  .btn {
+    background-color: #000;
+    color: white;
+    width: 100%;
+    font-size: 0.7rem;
+    margin-top: 4vh;
+    padding: 1vh;
+    font-family: "bw quinta pro"
+  }
+
+
+  a {
+    color: v.$secondary_color;
+  }
+
+  a:hover {
+    color: v.$secondary_color;
+    text-decoration: none
+  }
+
+
+  @media(max-width: 767px) {
+    .card {
+      margin: 3vh auto
+    }
+  }
+
+  @media(max-width: 767px) {
+    .cart {
+      padding: 4vh;
+    }
+  }
+
+  @media(max-width: 767px) {
+    .cart {
+      padding: 4vh;
+    }
+  }
+}

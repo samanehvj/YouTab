@@ -1,0 +1,16 @@
+@use "variables" as v;
+
+/* auth css */
+.auth-page {
+  min-height: 80vh;
+  .bg{
+    background-color: v.$secondary_color;
+    color: v.$primary_color;
+  }
+
+  .login-text h3{
+    font-size:30px;
+    margin-top: 20px;
+    font-family: "bw quinta pro";
+  }
+}
