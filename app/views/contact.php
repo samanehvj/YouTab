@@ -1,7 +1,7 @@
 <?php include VIEW . 'layouts/header.php' ?>
 
 
-    <div class="box">
+    <div class="box contact-page">
         <div class="container">
             <h1 class="display-4 text-center  head-text">Contact US </h1>
             <div class="row">
