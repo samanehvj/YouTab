@@ -9,6 +9,7 @@ class HomeController extends Controller
         $this->view->pageTitle = SITENAME . " - HOME";
         $this->view->render();
     }
+
     
     public function about() 
     {
@@ -17,10 +18,34 @@ class HomeController extends Controller
         $this->view->render();
     }
 
+
+
     public function contact()
     {
         $this->setView('contact');
         $this->view->pageTitle = SITENAME . " - Contact";
+        $this->view->render();
+    }
+
+    public function cart()
+    {
+        $this->setView('cart');
+        $this->view->pageTitle = SITENAME . " - Cart";
+        $this->view->render();
+    }
+
+
+    public function payment()
+    {
+        $this->setView('payment');
+        $this->view->pageTitle = SITENAME . " - Payment";
+        $this->view->render();
+    }
+
+    public function product_detail()
+    {
+        $this->setView(' product_detail');
+        $this->view->pageTitle = SITENAME . " -  product_detail";
         $this->view->render();
     }
 
@@ -30,12 +55,15 @@ class HomeController extends Controller
         $this->view->render();
     }
 
-    public function login()
+    public function auth()
     {
-        if ($_SESSION['userIsAdmin'] && !empty($_SESSION['userId'])) {
-            $this->go('home', 'login');
+        if (isset($_SESSION['userIsAdmin']) && $_SESSION['userIsAdmin'] && !empty($_SESSION['userId'])) {
+            $this->go('home', 'dashboard');
+        } else if (isset($_SESSION['userId']) && !empty($_SESSION['userId'])){
+            $this->go('home', 'profile');
         } else {
-            $this->setView('login');
+            $this->setView('auth');
+            $this->view->pageTitle = SITENAME . " - Authenticate";
             $this->view->render();
         }
     }
