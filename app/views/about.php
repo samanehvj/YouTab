@@ -5,19 +5,7 @@
         <img src="/imgs/hero-contact.jpg" class="img-fluid w-100 ">
     </div> <!--end hero image -->
 
-<!--    <div class="card bg-light my-5 mx-5" style="max-width: 40rem">-->
-<!--        <div class="card-header">About YouTab</div>-->
-<!--        <div class="card-body">-->
-<!--            <h5 class="card-title">Light card title</h5>-->
-<!--            <p class="card-text">Influential, innovative and progressive, YOUTAB is reinventing a wholly modern approach to fashion. Under the new vision of creative director Alessandro Michele, the House has redefined luxury for the 21st century, further reinforcing its position as one of the world’s most desirable fashion houses. Eclectic, contemporary, romantic—YOUTAB products represent the pinnacle of Italian craftsmanship and are unsurpassed for their quality and attention to detail.-->
-<!--                <br>-->
-<!--                <br>-->
-<!--                <br>-->
-<!---->
-<!--                YOUTAB is part of the Kering Group. A global Luxury group, Kering manages the development of a series of renowned Houses in Fashion, Leather Goods.-->
-<!---->
-<!--        </div>-->
-<!--    </div>-->
+
     <div class="container ">
         <div class="row ">
         <h1 class="m-3 p-2 text-center col-12 mt-5">About YouTab</h1>
