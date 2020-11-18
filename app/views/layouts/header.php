@@ -48,11 +48,11 @@ $action = $this->getAction();
 <!--                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Welcome</a>-->
                 <a href="/home/index" <?= ($action == 'index') ? "class='active'" : '' ?> >Welcome</a>
             </li>
+            <li <?= ($action == 'products') ? "class='active'" : '' ?> >
+                <a href="/product/products" >Shop</a>
+            </li>
             <li <?= ($action == 'about') ? "class='active'" : '' ?> >
                 <a href="/home/about"  >About</a>
-            </li>
-            <li <?= ($action == 'products') ? "class='active'" : '' ?> >
-                <a href="/home/products" >Products</a>
             </li>
             <li <?= ($action == 'contact') ? "class='active'" : '' ?> >
                 <a href="/home/contact" >Contact</a>
@@ -79,7 +79,7 @@ $action = $this->getAction();
                 <a href="#" class="return">Return Policy</a>
             </li>
             <li>
-                <a href="#" class="Shipping">Shipping</a>
+                <a href="" class="Shipping">Shipping</a>
             </li>
         </ul>
     </nav>
@@ -98,10 +98,10 @@ $action = $this->getAction();
                 </a>
                 <ul class="nav btn-nav ">
                     <li class="d-inline mr-2 active">
-                        <a class="d-inline" href="#"><i class="fas fa-user"></i> <span class="menu-shop"> Acount</span></a>
+                        <a href="/home/auth" class="d-inline" href="#"><i class="fas fa-user"></i> <span class="menu-shop"> Acount</span></a>
                     </li>
                     <li class="d-inline">
-                        <a class="d-inline" href="#"><i class="fas fa-shopping-cart"></i> <span class="menu-shop"> Cart</span></a>
+                        <a class="d-inline" href="/home/cart"><i class="fas fa-shopping-cart"></i> <span class="menu-shop"> Cart</span></a>
                     </li>
                 </ul>
             </div>
