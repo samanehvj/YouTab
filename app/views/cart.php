@@ -23,7 +23,6 @@
                                 <div class="row">Small </div>
 
                             </div>
-                            <div class="col"> <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a> </div>
                             <div class="col">$3000 <span class="close">&#10005;</span></div>
                         </div>
                     </div>
@@ -37,7 +36,6 @@
                                 <div class="row">Black</div>
                                 <div class="row">Small</div>
                             </div>
-                            <div class="col"> <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a> </div>
                             <div class="col">$3000 <span class="close">&#10005;</span></div>
                         </div>
                     </div>
