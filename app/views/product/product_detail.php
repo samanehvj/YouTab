@@ -48,7 +48,7 @@
 
 
                         <div class="text-center mt-5">
-                            <a href="products/category/1" class="btn btn-dark text-center w-50 "> Add To cart </a>
+                            <a href="products/category/1" class="btn btn-dark text-center w-50 "> Place to Cart  </a>
                         </div>
                     </div>
                 </div>
