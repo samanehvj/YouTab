@@ -10,7 +10,7 @@ class User
         $this->db = new DB;
     }
 
-    public function login($email, $password)
+    public function getByEmail($email)
     {
         $sql = "SELECT * FROM users 
         WHERE email = :email";
@@ -19,8 +19,6 @@ class User
 
         $this->db->bind(":email", $email);
 
-        $user =  $this->db->single();
-
-        return password_verify($password, $user->password) ? $user : false;
+        return  $this->db->single();
     }
 }
