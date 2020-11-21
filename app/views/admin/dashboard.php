@@ -6,8 +6,8 @@ include VIEW . 'admin/layouts/sidebar.php';
 ?>
 <div class="table-responsive">
 
-    <p> You Have <?= $this->viewData['subscriberCount'] ?> Subscriber</p>
-
+<!--    <p> You Have --><?//= $this->viewData['subscriberCount'] ?><!-- Subscriber</p>-->
+<h1>Hi Admin</h1>
 </div>
 <?php
 
