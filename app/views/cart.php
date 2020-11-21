@@ -1,10 +1,10 @@
 <?php include VIEW . 'layouts/header.php' ?>
 
-
+<!--Start container -->
     <div class="container cart-page">
-        <div class="card">
-            <div class="row">
-                <div class="col-md-8 cart">
+        <div class="card">  <!--Start card -->
+            <div class="row"> <!--Start row -->
+                <div class="col-md-8 cart"> <!-- start left side ( product list )   -->
                     <div class="title">
                         <div class="row">
                             <div class="col">
@@ -41,8 +41,13 @@
                     </div>
 
                     <div class="back-to-shop"><a href="/product/products/">&leftarrow;<span class="text-muted">Back to shop</span></a></div>
-                </div>
-                <div class="col-md-4 summary">
+
+
+                </div> <!-- end  left side ( product list )   -->
+
+
+
+                <div class="col-md-4 summary"> <!-- start right side ( checkout )   -->
                     <div>
                         <h5><b>Summary</b></h5>
                     </div>
@@ -60,9 +65,9 @@
                         <div class="col">TOTAL PRICE</div>
                         <div class="col text-right">$6,020</div>
                     </div> <a href="/home/payment" class="btn">CHECKOUT</a>
-                </div>
-            </div>
-        </div>
-    </div>
+                </div>  <!-- end  right side ( checkout )   -->
+            </div> <!--end of row -->
+        </div> <!--end of card -->
+    </div> <!--end of  container -->
 
 <?php include VIEW . 'layouts/footer.php' ?>
