@@ -9,20 +9,25 @@ class UserController extends Controller
         $userModel = $this->model('User');
 
 
-        $user = $userModel->login($_POST['email'], $_POST['password']);
+        $user = $userModel->getByEmail($_POST['email']);
+
         if(!$user) {
             $this->go('home', 'auth');
         }
 
-        $_SESSION["userId"] = $user->id;
-        $_SESSION["userIsAdmin"] = $user->is_admin;
-        $_SESSION["userName"] = $user->name;
-        $_SESSION["userEmail"] = $user->email;
+        if (password_verify($_POST['password'], $user->password)) {
+            $_SESSION["userId"] = $user->id;
+            $_SESSION["userIsAdmin"] = $user->is_admin;
+            $_SESSION["userName"] = $user->name;
+            $_SESSION["userEmail"] = $user->email;
+        }
 
-        if ($_SESSION["userId"] && $_SESSION['userIsAdmin']) {
+        if (isset($_SESSION["userId"]) && $_SESSION['userIsAdmin']) {
             $this->go('admin', 'dashboard');
-        } else {
+        } else if (isset($_SESSION["userId"])) {
             $this->go('user', 'profile');
+        } else {
+            $this->go('home', 'auth');
         }
 
     }
