@@ -117,12 +117,12 @@
 
 
   a {
-    color: v.$secondary_color;
+    color: v.$secondary_color
   }
 
   a:hover {
-    color: v.$secondary_color;
-    text-decoration: none
+    text-decoration: none;
+    font-weight: bold;
   }
 
 
