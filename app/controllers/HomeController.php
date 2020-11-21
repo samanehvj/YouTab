@@ -58,13 +58,15 @@ class HomeController extends Controller
     public function auth()
     {
         if (isset($_SESSION['userIsAdmin']) && $_SESSION['userIsAdmin'] && !empty($_SESSION['userId'])) {
-            $this->go('home', 'dashboard');
+            $this->go('admin', 'dashboard');
         } else if (isset($_SESSION['userId']) && !empty($_SESSION['userId'])){
-            $this->go('home', 'profile');
+            $this->go('user', 'profile');
         } else {
             $this->setView('auth');
             $this->view->pageTitle = SITENAME . " - Authenticate";
             $this->view->render();
         }
     }
+
+
 }
