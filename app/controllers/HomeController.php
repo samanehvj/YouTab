@@ -1,5 +1,7 @@
 <?php
 
+
+//show sitename on view
 class HomeController extends Controller 
 {
 
@@ -54,6 +56,8 @@ class HomeController extends Controller
         $this->setView('pageNotFound');
         $this->view->render();
     }
+
+
 
     public function auth()
     {
