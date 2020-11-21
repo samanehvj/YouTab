@@ -7,8 +7,6 @@ class UserController extends Controller
     public function login()
     {
         $userModel = $this->model('User');
-
-
         $user = $userModel->getByEmail($_POST['email']);
 
         if(!$user) {
@@ -30,6 +28,35 @@ class UserController extends Controller
             $this->go('home', 'auth');
         }
 
+    }
+
+    public function register()
+    {
+        if (isset($_SESSION['userId'])
+            || !isset($_POST['name'])
+            || !isset($_POST['email'])
+            || !isset($_POST['password'])) {
+            $this->go('home', 'auth');
+        }
+
+        $userModel = $this->model('User');
+        $user = $userModel->getByEmail($_POST['email']);
+
+        if(isset($user->email)) {
+            $this->go('home', 'auth');
+            return;
+        }
+
+        $user = $userModel->add($_POST['name'], $_POST['email'], $_POST['password']);
+
+        if(isset($user->id)) {
+            $_SESSION["userId"] = $user->id;
+            $_SESSION["userIsAdmin"] = $user->is_admin;
+            $_SESSION["userName"] = $user->name;
+            $_SESSION["userEmail"] = $user->email;
+        }
+
+        $this->go('home', 'auth');
     }
 
     public function profile()
