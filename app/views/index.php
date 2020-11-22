@@ -1,20 +1,30 @@
 <?php include VIEW . 'layouts/header.php' ?>
 
 
-    <div class="container-fluid ">
-        <img src="/imgs/hero-home.jpg" class="img-fluid w-100 ">
-    </div>
+
+
+
+    <!--start hero image -->
+    <div class="container-fluid  ">
+        <img src="/imgs/hero-home.jpg" class="img-fluid w-100  ">
+    </div> <!--end hero image -->
+
+
+
+
 <!--start container-->
     <div  class="container">
-        <div class="row my-5"> <!--row -->
+        <div class="row my-5 text-home"> <!--row -->
             <div class=" col-lg-6"> <!--start left cat-->
                 <div class="larg-cat d-flex flex-column justify-content-between h-100 mb-3 mb-lg-0 p-2 border border-dark">
                     <img class="img-fluid w-100" src="/imgs/skirt-cat.jpg">
-                    <h1 class="text-center my-3">Skirts</h1>
+                    <h1 class="text-center my-3 home-titile">Skirts</h1>
                     <p class="py-3 px-5 text-center text-lg-left text-cat">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.                     </p>
+                        Our fabulous Fall/Winter collection has arrived and it’s better than ever. We’ve taken some inspiration from the key global trends and put our own stamp on them. By focusing on subtle and chic looks, we’ve produced relaxed designs that are as stylish as they are comfortable.
+
+                                   </p>
                     <div class="text-center mt-5">
-                        <a href="products/category/1" class="btn btn-dark text-center collection">View collection </a>
+                        <a href="products/category/1" class="btn btn-dark  text-center collection">View collection </a>
                     </div>
                 </div>
             </div> <!--end left cat-->
@@ -39,7 +49,7 @@
 
 
 
-        <h1 class="text-center my-5"> Most popular products in YouTab </h1>
+        <h1 class="text-center my-5 display-4 popular "> Most popular products in YouTab </h1>
 
             <div class="row my-5"> <!-- start row of Most famous product-->
                 <div class=" col-lg-6"> <!-- start row of dress left side  famous product-->
@@ -48,13 +58,13 @@
                     </div>
                 </div> <!-- end row of dress left side  famous product-->
 
-                <div class="col-lg-6 row">
+                <div class="col-lg-6 row product-list">
 
                     <div class=" col-lg-6 ">  <!--start right cat-->
                         <div class="col-12 small-cat mb-4 p-2 k">
                             <img class="img-fluid w-100" src="/imgs/skirts/18.png">
                             <h5 class="products-text mx-4 my-2">
-                                Skirt with Metallic Buckle
+                                Skirt with Metallic
                             </h5>
                             <h5 class="mx-4 my-2">
                                 $2000
