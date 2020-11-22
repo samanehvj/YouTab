@@ -1,8 +1,11 @@
 <?php include VIEW . 'layouts/header.php' ?>
 
 <!--start hero image -->
-    <div class="container-fluid ">
-        <img src="/imgs/hero-contact.jpg" class="img-fluid w-100 ">
+    <div class="container-fluid carousel-item active  ">
+        <img src="/imgs/hero-contact.jpg" class="img-fluid w-100  ">
+        <div class="carousel-caption text-sm-left text-light">
+            <h1>What do you Know about YouTab</h1>
+        </div>
     </div> <!--end hero image -->
 
 
