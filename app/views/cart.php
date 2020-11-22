@@ -8,7 +8,7 @@
                     <div class="title">
                         <div class="row">
                             <div class="col">
-                                <h4><b>Shopping Cart</b></h4>
+                                <h3 class="summery-title"><b>Shopping Cart</b></h3>
                             </div>
                         </div>
                     </div>
@@ -49,7 +49,7 @@
 
                 <div class="col-md-4 summary"> <!-- start right side ( checkout )   -->
                     <div>
-                        <h5><b>Summary</b></h5>
+                        <h5 class=summery-title><b>Summary</b></h5>
                     </div>
                     <hr>
                     <div class="row">
@@ -60,7 +60,8 @@
                         <p>SHIPPING</p>
                         <select>
                             <option class="text-muted">Standard-Delivery-$20</option>
-                        </select>            </form>
+                        </select>
+                    </form>
                     <div class="row">
                         <div class="col">TOTAL PRICE</div>
                         <div class="col text-right">$6,020</div>
