@@ -33,6 +33,15 @@
 
     padding: 4vh;
     background-color: lightgray;
+    font-family:"noto sans";
+    font-size: 15px;
+
+
+
+  }
+  .summery-title{
+    font-family: "bw quinta pro";
+    font-size: 30px;
   }
 
 
@@ -47,12 +56,16 @@
   .row {
     margin: 0
   }
-
+.title {
+  font-family: "bw quinta pro";
+}
 
   .main {
     margin: 0;
     padding: 2vh 0;
-    width: 100%
+    width: 100%;
+    font-family:"noto sans";
+    font-size: 15px;
   }
 
   .col-2,

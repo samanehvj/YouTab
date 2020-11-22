@@ -203,7 +203,7 @@ a.Shipping:hover {
   right: 0;
 }
 
-/* contact css */
+/* contact  and about css */
 .contact-page {
   /*form start*/
 }
@@ -316,6 +316,9 @@ a.Shipping:hover {
   font-size: 22px;
   font-family: "noto sans ";
 }
+.contact-page .carousel-caption {
+  font-family: "bw quinta pro";
+}
 .contact-page .image-text {
   font-family: "noto sans ";
 }
@@ -332,16 +335,25 @@ h1,
 .text-cat,
 .footer-text {
   font-family: "noto sans ";
+  font-size: 16px;
 }
 
-.products-text {
-  font-size: 17px;
+.text-home {
+  font-family: "bw quinta pro";
+}
+
+.popular {
+  font-family: "bw quinta pro";
+}
+
+.product-list {
   font-family: "bw quinta pro";
 }
 
 .product-title {
   font-family: "bw quinta pro";
   font-weight: bold;
+  font-size: 18px;
 }
 
 /* shopping cart css */
@@ -369,6 +381,12 @@ h1,
 .cart-page .summary {
   padding: 4vh;
   background-color: lightgray;
+  font-family: "noto sans";
+  font-size: 15px;
+}
+.cart-page .summery-title {
+  font-family: "bw quinta pro";
+  font-size: 30px;
 }
 .cart-page .summary .col-2 {
   padding: 0;
@@ -379,10 +397,15 @@ h1,
 .cart-page .row {
   margin: 0;
 }
+.cart-page .title {
+  font-family: "bw quinta pro";
+}
 .cart-page .main {
   margin: 0;
   padding: 2vh 0;
   width: 100%;
+  font-family: "noto sans";
+  font-size: 15px;
 }
 .cart-page .col-2,
 .cart-page .col {
