@@ -1,6 +1,6 @@
 <?php
 
-
+//Add user when login to profile
 class UserController extends Controller
 {
 
@@ -29,7 +29,7 @@ class UserController extends Controller
         }
 
     }
-
+//i they do not have account they register
     public function register()
     {
         if (isset($_SESSION['userId'])
