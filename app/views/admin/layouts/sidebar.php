@@ -9,12 +9,8 @@ if (session_status() == PHP_SESSION_NONE) {
     <div class="bg-light border-right" id="sidebar-wrapper">
         <div class="sidebar-heading"><?= SITENAME ?> </div>
         <div class="list-group list-group-flush">
-            <a href="/home/dashboard" class="list-group-item list-group-item-action bg-light">Dashboard</a>
+            <a href="/admin/dashboard" class="list-group-item list-group-item-action bg-light">Dashboard</a>
             <a href="/category/adminList" class="list-group-item list-group-item-action bg-light">Categories</a>
-            <a href="/subscriber/listView" class="list-group-item list-group-item-action bg-light">Subscribers</a>
-            <a href="/subscriber/listView" class="list-group-item list-group-item-action bg-light">Subscribers</a>
-
-
 
         </div>
     </div>
