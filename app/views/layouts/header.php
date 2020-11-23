@@ -60,6 +60,18 @@ $action = $this->getAction();
             <li <?= ($action == 'contact') ? "class='active'" : '' ?> >
                 <a href="/home/contact" >Contact</a>
             </li>
+            <?php if(isset($_SESSION['userId'])): ?>
+                <hr class="text-light border border-light">
+                <?php if(isset($_SESSION['userIsAdmin']) && $_SESSION['userIsAdmin']): ?>
+                    <li>
+                        <a href="/admin/dashboard" >Dashboard</a>
+                    </li>
+                <?php endif; ?>
+                <li>
+                    <a href="/user/logout" >Logout</a>
+                </li>
+            <?php endif; ?>
+
 <!--            <li>-->
 <!--                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Shop</a>-->
 <!--                <ul class="collapse list-unstyled" id="pageSubmenu">-->
