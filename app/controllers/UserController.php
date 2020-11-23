@@ -75,6 +75,6 @@ class UserController extends Controller
         unset($_SESSION["userIsAdmin"]);
         unset($_SESSION["userName"]);
         unset($_SESSION["userEmail"]);
-        $this->go("home", "login");
+        $this->go("home", "auth");
     }
 }
