@@ -10,7 +10,10 @@ if (session_status() == PHP_SESSION_NONE) {
         <div class="sidebar-heading"><?= SITENAME ?> </div>
         <div class="list-group list-group-flush">
             <a href="/home/dashboard" class="list-group-item list-group-item-action bg-light">Dashboard</a>
+            <a href="/category/adminList" class="list-group-item list-group-item-action bg-light">Categories</a>
             <a href="/subscriber/listView" class="list-group-item list-group-item-action bg-light">Subscribers</a>
+            <a href="/subscriber/listView" class="list-group-item list-group-item-action bg-light">Subscribers</a>
+
 
 
         </div>
@@ -35,9 +38,11 @@ if (session_status() == PHP_SESSION_NONE) {
                             Hi <?= $_SESSION['userName'] ?>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Profile</a>
+                            <a class="dropdown-item" href="<?= URLROOT ?>/home/index">Back To Shop</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="<?= URLROOT ?>/home/doLogOut">Sign out</a>
+                            <a class="dropdown-item" href="<?= URLROOT ?>/user/profile">Profile</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="<?= URLROOT ?>/user/logout">Logout</a>
                         </div>
                     </li>
                 </ul>
