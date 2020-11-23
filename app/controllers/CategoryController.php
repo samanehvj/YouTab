@@ -153,7 +153,7 @@ class CategoryController extends Controller
             $categoryModel = $this->model('Category');
             $category =  $categoryModel->getById($id);
             unlink($category->img);
-            $categoryModel->deleteById($id);
+            $categoryModel->delete($id);
             $this->go('category', 'adminList');
         } else {
             $this->go('home', 'auth');
