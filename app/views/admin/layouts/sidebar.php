@@ -12,6 +12,8 @@ if (session_status() == PHP_SESSION_NONE) {
             <a href="/admin/dashboard" class="list-group-item list-group-item-action bg-light">Dashboard</a>
             <a href="/category/adminList" class="list-group-item list-group-item-action bg-light">Categories</a>
             <a href="/color/adminList" class="list-group-item list-group-item-action bg-light">Colors</a>
+            <a href="/size/adminList" class="list-group-item list-group-item-action bg-light">Size</a>
+
 
         </div>
     </div>
