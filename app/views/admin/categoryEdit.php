@@ -9,10 +9,10 @@ include VIEW . 'admin/layouts/sidebar.php';
         <input type="hidden" name="id" value="<?= $this->viewData->id ?>" />
         <input type="hidden" name="currentImage" value="<?= $this->viewData->img ?>" />
         <div class="form-group">
-            <input value="<?= $this->viewData->name ?>" class="form-control" id="name" name="name" placeholder="Category Name"/>
+            <input value="<?= $this->viewData->name ?>" class="form-control" id="name" name="name" placeholder="Category Name" required/>
         </div>
         <div class="custom-file">
-            <input type="file" class="custom-file-input" name="image" id="customFile">
+            <input type="file" class="custom-file-input" name="image" id="customFile" required />
             <label class="custom-file-label" for="customFile">Category Image</label>
         </div>
         <div class="m-3">

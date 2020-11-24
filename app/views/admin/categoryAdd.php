@@ -7,10 +7,10 @@ include VIEW . 'admin/layouts/sidebar.php';
 <div class="container d-flex justify-content-around ">
     <form class="mt-5" method="post" action="/category/adminDoAdd" enctype="multipart/form-data">
         <div class="form-group">
-            <input class="form-control" id="name" name="name" placeholder="Category Name"/>
+            <input class="form-control" id="name" name="name" placeholder="Category Name" required/>
         </div>
         <div class="custom-file">
-            <input type="file" class="custom-file-input" name="image" id="customFile">
+            <input type="file" class="custom-file-input" name="image" id="customFile" required />
             <label class="custom-file-label" for="customFile">Category Image</label>
         </div>
         <button type="submit" class="btn btn-success mt-3">Save</button>
