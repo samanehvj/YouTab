@@ -9,7 +9,7 @@ include VIEW . 'admin/layouts/sidebar.php';
         <input type="hidden" name="id" value="<?= $this->viewData->id ?>" />
 
         <div class="form-group">
-            <input value="<?= $this->viewData->name ?>" class="form-control" id="name" name="name" placeholder="size Name"/>
+            <input value="<?= $this->viewData->name ?>" class="form-control" id="name" name="name" placeholder="size Name" required />
         </div>
 
 
