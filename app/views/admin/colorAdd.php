@@ -10,7 +10,7 @@ include VIEW . 'admin/layouts/sidebar.php';
             <input class="form-control" id="name" name="name" placeholder="Color Name"/>
         </div>
         <div class="form-group">
-            <input  class="form-control" id="hex" name="hex" placeholder="Hex Number (4FcategoryEdit.php36A9)"/>
+            <input  class="form-control" id="hexƒ" name="hex" placeholder="Hex Number (4FcategoryEdit.php36A9)"/>
         </div>
 
         <button type="submit" class="btn btn-success mt-3">Save</button>

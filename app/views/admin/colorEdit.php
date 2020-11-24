@@ -14,7 +14,7 @@ include VIEW . 'admin/layouts/sidebar.php';
         <div class="form-group">
             <input value="<?= $this->viewData->hex ?>" class="form-control" id="hex" name="hex" placeholder="Color Hex (4F96A7)"/>
         </div>
-        
+
         <button type="submit" class="btn btn-warning mt-3">Edit</button>
 
     </form>
