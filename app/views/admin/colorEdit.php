@@ -9,10 +9,10 @@ include VIEW . 'admin/layouts/sidebar.php';
         <input type="hidden" name="id" value="<?= $this->viewData->id ?>" />
 
         <div class="form-group">
-            <input value="<?= $this->viewData->name ?>" class="form-control" id="name" name="name" placeholder="Color Name"/>
+            <input value="<?= $this->viewData->name ?>" class="form-control" id="name" name="name" placeholder="Color Name" required/>
         </div>
         <div class="form-group">
-            <input value="<?= $this->viewData->hex ?>" class="form-control" id="hex" name="hex" placeholder="Color Hex (4F96A7)"/>
+            <input value="<?= $this->viewData->hex ?>" class="form-control" id="hex" name="hex" placeholder="Color Hex (4F96A7)" required/>
         </div>
 
         <button type="submit" class="btn btn-warning mt-3">Edit</button>
