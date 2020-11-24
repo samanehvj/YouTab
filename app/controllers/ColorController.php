@@ -33,7 +33,8 @@ class ColorController extends Controller
     {
         if (isset($_SESSION['userIsAdmin']) && $_SESSION['userIsAdmin']) {
 
-            if (!isset($_POST['name']) || !isset($_POST['hex'])) {
+            if (!isset($_POST['name']) || !isset($_POST['hex'])
+                || empty($_POST['name']) || empty($_POST['hex'])) {
                 $_SESSION['err'] = 'All fields should be filled';
                 $this->go('color', 'adminAdd');
             }
@@ -68,7 +69,8 @@ class ColorController extends Controller
     {
         if (isset($_SESSION['userIsAdmin']) && $_SESSION['userIsAdmin']) {
 
-            if (!isset($_POST['name']) || !isset($_POST['hex'])) {
+            if (!isset($_POST['name']) || !isset($_POST['hex'])
+                || empty($_POST['name']) || empty($_POST['hex'])) {
                 $_SESSION['err'] = 'All fields should be filled';
                 $this->go('color', 'adminList');
             }

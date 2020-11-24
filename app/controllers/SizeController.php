@@ -33,7 +33,7 @@ class SizeController extends Controller
     {
         if (isset($_SESSION['userIsAdmin']) && $_SESSION['userIsAdmin']) {
 
-            if (!isset($_POST['name']) ) {
+            if (!isset($_POST['name']) || empty($_POST['name'])) {
                 $_SESSION['err'] = 'All fields should be filled';
                 $this->go('size', 'adminAdd');
             }
@@ -68,7 +68,7 @@ class SizeController extends Controller
     {
         if (isset($_SESSION['userIsAdmin']) && $_SESSION['userIsAdmin']) {
 
-            if (!isset($_POST['name'])) {
+            if (!isset($_POST['name']) || empty($_POST['name'])) {
                 $_SESSION['err'] = 'All fields should be filled';
                 $this->go('size', 'adminList');
             }
