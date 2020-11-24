@@ -7,7 +7,7 @@ include VIEW . 'admin/layouts/sidebar.php';
 <div class="container d-flex justify-content-around ">
     <form class="mt-5" method="post" action="/size/adminDoAdd" >
         <div class="form-group">
-            <input class="form-control" id="name" name="name" placeholder="Size Name"/>
+            <input class="form-control" id="name" name="name" placeholder="Size Name" required/>
         </div>
 
 
