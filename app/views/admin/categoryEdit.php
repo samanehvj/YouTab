@@ -12,7 +12,7 @@ include VIEW . 'admin/layouts/sidebar.php';
             <input value="<?= $this->viewData->name ?>" class="form-control" id="name" name="name" placeholder="Category Name" required/>
         </div>
         <div class="custom-file">
-            <input type="file" class="custom-file-input" name="image" id="customFile" required />
+            <input type="file" class="custom-file-input" name="image" id="customFile" />
             <label class="custom-file-label" for="customFile">Category Image</label>
         </div>
         <div class="m-3">
@@ -20,6 +20,11 @@ include VIEW . 'admin/layouts/sidebar.php';
             <a href="<?= URLROOT . "/" . $this->viewData->img ?>" target="_blank">
                 <img src="<?= URLROOT . "/" . $this->viewData->img ?>" width="100px" />
             </a>
+        </div>
+
+        <div class="form-group">
+            <label for="info">Description</label>
+            <textarea class="form-control" id="info" name="info" rows="3"><?= $this->viewData->info ?></textarea>
         </div>
         <button type="submit" class="btn btn-warning mt-3">Edit</button>
 
