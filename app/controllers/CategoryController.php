@@ -67,7 +67,7 @@ class CategoryController extends Controller
             if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
                 $categoryModel = $this->model('Category');
 
-                if ($categoryModel->add($_POST['name'], $target_file)) {
+                if ($categoryModel->add($_POST['name'], $target_file, $_POST['info'])) {
                     $_SESSION['success'] = true;
                     $this->go('category', 'adminList');
                 }
@@ -135,7 +135,7 @@ class CategoryController extends Controller
             if ($imgIsUploaded) {
                 $categoryModel = $this->model('Category');
 
-                if ($categoryModel->edit($_POST['id'], $_POST['name'], $target_file)) {
+                if ($categoryModel->edit($_POST['id'], $_POST['name'], $target_file, $_POST['info'])) {
                     $_SESSION['success'] = true;
                     $this->go('category', 'adminList');
                 }
