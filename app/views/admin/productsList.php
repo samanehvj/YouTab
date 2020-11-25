@@ -28,6 +28,7 @@ include VIEW . 'admin/layouts/sidebar.php';
                     <td><?= $product->view ?></td>
                     <td><?= $product->date ?></td>
                     <td>
+                        <a href="/product/adminColorList/<?= $product->id ?>" class="btn btn-info">View Colors</a>
                         <a href="/product/adminEdit/<?= $product->id ?>" class="btn btn-warning">Edit</a>
                         <a href="/product/adminDelete/<?= $product->id ?>" class="btn btn-danger">Delete</a> </td>
                 </tr>
