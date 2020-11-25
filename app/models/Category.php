@@ -25,36 +25,39 @@ Class Category {
         return $this->db->single();
     }
 
-    public function add($name, $image)
+    public function add($name, $image, $info = '')
     {
         $sql = "INSERT INTO categories 
-        (name, img) 
+        (name, img, info) 
         values 
-        (:name, :image)";
+        (:name, :image, :info)";
 
         $this->db->query($sql);
 
         $this->db->bind(':name', $name);
         $this->db->bind(':image', $image);
+        $this->db->bind(':info', $info);
 
         return $this->db->execute();
     }
 
-    public function edit($id, $name, $image)
+    public function edit($id, $name, $image, $info)
     {
         if (!empty($image)) {
-            $sql = "UPDATE categories SET  name=:name, img=:image WHERE id=:id";
+            $sql = "UPDATE categories SET  name=:name, img=:image, info=:info WHERE id=:id";
             $this->db->query($sql);
             $this->db->bind(':name', $name);
             $this->db->bind(':image', $image);
+            $this->db->bind(':info', $info);
             $this->db->bind(':id', $id);
 
             return $this->db->execute();
         }
 
-        $sql = "UPDATE categories SET  name=:name WHERE id=:id";
+        $sql = "UPDATE categories SET  name=:name, info=:info WHERE id=:id";
         $this->db->query($sql);
         $this->db->bind(':name', $name);
+        $this->db->bind(':info', $info);
         $this->db->bind(':id', $id);
 
         return $this->db->execute();
