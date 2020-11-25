@@ -64,7 +64,7 @@ $action = $this->getAction();
                 <hr class="text-light border border-light">
                 <?php if(isset($_SESSION['userIsAdmin']) && $_SESSION['userIsAdmin']): ?>
                     <li>
-                        <a href="/admin/dashboard" >Dashboard</a>
+                        <a href="/admin/dashboard" > Admin Dashboard</a>
                     </li>
                 <?php endif; ?>
                 <li>
