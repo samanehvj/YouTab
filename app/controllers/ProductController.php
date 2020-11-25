@@ -18,7 +18,7 @@ class ProductController extends Controller
     }
 
 
-
+    // Start working on Product
     public function adminList()
     {
         if (!Session::isAdmin()) {
@@ -121,7 +121,7 @@ class ProductController extends Controller
     }
 
 
-
+    // Start working on Product Colors
     public function adminColorList($id = 0)
     {
         if (!Session::isAdmin() || $id == 0) {
@@ -189,7 +189,7 @@ class ProductController extends Controller
     }
 
 
-
+    // Start working on Product Color Sizes
     public function adminColorSizeList($id = 0)
     {
         if (!Session::isAdmin() || $id == 0) {
@@ -289,4 +289,103 @@ class ProductController extends Controller
         $this->goBack();
     }
 
+
+    //Start working on Product Color Images
+    public function adminColorImageList($id = 0)
+    {
+        if (!Session::isAdmin() || $id == 0) {
+            $this->go('home', 'auth');
+        }
+
+        $productColorImageModel = $this->model('ProductColorImage');
+        $productData['productColorImages'] = $productColorImageModel->getByProductColorId($id);
+
+        $productColorModel = $this->model('ProductColor');
+        $productData['productColor'] = $productColorModel->getById($id);
+
+        $this->setView('admin/productColorImagesList', $productData);
+        $this->view->pageTitle = SITENAME . " - Product Color Image List";
+        $this->view->render();
+    }
+
+    public function adminColorImageAdd($id = 0)
+    {
+        if (!Session::isAdmin() || $id == 0) {
+            $this->go('home', 'auth');
+        }
+
+        $productColorModel = $this->model('ProductColor');
+        $data['productColor'] = $productColorModel->getById($id);
+
+        $this->setView('admin/productColorImageAdd', $data);
+        $this->view->pageTitle = SITENAME . " - Product Color Image Add";
+        $this->view->render();
+    }
+
+    public function adminDoColorImageAdd()
+    {
+        if (!Session::isAdmin()) {
+            $this->go('home', 'auth');
+        }
+
+        if (!isset($_POST['product_color_id']) || empty($_POST['product_color_id'])) {
+            $_SESSION['err'] = 'All fields should be filled';
+            $this->goBack();
+        }
+
+        if ($_FILES['image']['size'] == 0) {
+            $_SESSION['err'] = 'Image field should not be empty';
+            echo 'Image size err';
+            $this->goBack();
+        }
+
+        $productColorModel = $this->model('ProductColor');
+        $productColor = $productColorModel->getById($_POST['product_color_id']);
+
+        $target_dir = "imgs/" . strtolower($productColor->category_name) . "/";
+        $newName =  $productColor->category_name . "_" . time();
+
+
+        // check the extension of the uploaded file
+        $ext = pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION);
+
+        //create unique file name for each subscriber image file
+        $target_file = $target_dir . $newName . '.' . $ext;
+
+        //set allowed file type to be submit
+        $allowFileType = array('png', 'jpg', 'jpeg');
+
+        //if the file extension is not allowed redirect to main
+        if (!in_array($ext, $allowFileType)) {
+            $_SESSION['err'] = 'Image is not valid only (png, jpg and jpeg) but ext is: ' . $ext;
+            $this->goBack();
+        }
+
+        if (!file_exists($target_dir )) {
+            mkdir($target_dir);
+        }
+
+        //try to move uploaded file to assignment directory and then add data to database
+        if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
+            $productColorImage = $this->model('ProductColorImage');
+
+            if ($productColorImage->add($_POST['product_color_id'], $target_file)) {
+                $_SESSION['success'] = true;
+                $this->go('product', 'adminColorImageList', $_POST['product_color_id']);
+            }
+        }
+    }
+
+    public function adminColorImageDelete($id = 0)
+    {
+        if (!Session::isAdmin() || $id == 0 ) {
+            $this->go('home', 'auth');
+        }
+
+        $productColorImageModel = $this->model('ProductColorImage');
+        $productColorImage = $productColorImageModel->getById($id);
+        unlink($productColorImage->img);
+        $productColorImageModel->delete($id);
+        $this->goBack();
+    }
 }
