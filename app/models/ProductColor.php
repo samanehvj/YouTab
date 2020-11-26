@@ -11,7 +11,7 @@ Class ProductColor {
 
     public function getByProductId($productId)
     {
-        $sql = "SELECt pc.*, c.name, c.hex 
+        $sql = "SELECT pc.*, c.name, c.hex 
                 FROM product_colors AS pc 
                 JOIN colors AS c 
                 ON c.id=pc.color_id 
@@ -21,6 +21,15 @@ Class ProductColor {
         $this->db->bind(':productId', $productId);
 
         return $this->db->resultSet();
+    }
+
+    public function getOneByProductId($pId)
+    {
+        $sql = "SELECT * FROM product_colors WHERE product_id=:pId LIMIT 1";
+        $this->db->query($sql);
+        $this->db->bind(':pId', $pId);
+
+        return $this->db->single();
     }
 
     public function getByColorId($colorId)
