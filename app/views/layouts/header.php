@@ -116,7 +116,7 @@ $action = $this->getAction();
                         <a href="/home/auth" class="d-inline" href="#"><i class="fas fa-user"></i> <span class="menu-shop"> Acount</span></a>
                     </li>
                     <li class="d-inline">
-                        <a class="d-inline" href="/home/cart"><i class="fas fa-shopping-cart"></i> <span class="menu-shop"> Cart</span></a>
+                        <a class="d-inline" href="/product/addToCart"><i class="fas fa-shopping-cart"></i> <span class="menu-shop"> Cart</span></a>
                     </li>
                 </ul>
             </div>
