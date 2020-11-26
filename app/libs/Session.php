@@ -11,4 +11,12 @@ class Session
         return true;
     }
 
+    public static function isLogin()
+    {
+        if (!isset($_SESSION['userId']) || !$_SESSION['userId']) {
+            return false;
+        }
+        return true;
+    }
+
 }
