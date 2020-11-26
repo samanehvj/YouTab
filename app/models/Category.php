@@ -16,6 +16,14 @@ Class Category {
         return $this->db->resultSet();
     }
 
+    public function getTop($number = 1)
+    {
+        $sql = "SELECt * FROM categories LIMIT :number";
+        $this->db->query($sql);
+        $this->db->bind(':number', $number);
+        return $this->db->resultSet();
+    }
+
     public function getById($id)
     {
         $sql = "SELECt * FROM categories WHERE id = :id";
