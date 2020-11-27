@@ -31,4 +31,27 @@ class OrderController extends Controller
         }
     }
 
+    public function adminDoEdit()
+    {
+        if (isset($_SESSION['userIsAdmin']) && $_SESSION['userIsAdmin']) {
+
+            if (!isset($_POST['is_delivered']) || empty($_POST['is_delivered'])
+                || !isset($_POST['is_canceled']) || empty($_POST['is_canceled'])
+                || !isset($_POST['id']) || empty($_POST['id']) ) {
+                $_SESSION['err'] = 'All fields should be filled';
+                $this->go('order', 'adminList');
+            }
+
+            $orderModel = $this->model('Order');
+
+            if ($orderModel->edit($_POST['id'], $_POST['is_delivered'], $_POST['is_canceled'])) {
+                $_SESSION['success'] = true;
+                $this->go('order', 'adminList');
+            }
+
+        } else {
+            $this->go('home', 'auth');
+        }
+    }
+
 }
