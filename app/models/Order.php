@@ -49,4 +49,15 @@ class Order
         return $this->db->single();
     }
 
+    public function edit($id, $isDelivered, $isCanceled)
+    {
+        $sql = "UPDATE orders SET  is_delivered=:isDel, is_canceled=:isCan WHERE id=:id";
+        $this->db->query($sql);
+        $this->db->bind(':isDel', $isDelivered);
+        $this->db->bind(':isCan', $isCanceled);
+        $this->db->bind(':id', $id);
+
+        return $this->db->execute();
+    }
+
 }
