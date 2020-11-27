@@ -5,16 +5,96 @@ class ProductController extends Controller
 {
     public function products()
     {
-        $this->setView('product/products');
+        $productModel = $this->model('Product');
+        $productColorModel = $this->model('ProductColor');
+        $productColorImageModel = $this->model('ProductColorImage');
+
+        $data['products'] = $productModel->getAll();
+
+        foreach ($data['products'] as $index => $product) {
+            $productColors = $productColorModel->getByProductId($product->id);
+            $data['products'][$index]->colors = $productColors;
+
+            $productImage = $productColorImageModel->getOneByProductColorId($productColors[0]->id);
+            $data['products'][$index]->img = $productImage->img;
+        }
+
+        $this->setView('product/products', $data);
         $this->view->pageTitle = SITENAME . " - Product List";
         $this->view->render();
     }
 
-    public function productDetail()
+    public function productDetail($pId = 0)
     {
-        $this->setView('product/product_detail');
+        if( $pId == 0){
+            $this->go('product', 'products');
+        }
+
+        $productModel = $this->model('Product');
+        $producColortModel = $this->model('ProductColor');
+        $productColorSizeModel = $this->model('ProductColorSize');
+        $productColorImageModel = $this->model('ProductColorImage');
+
+        $product = $productModel->getById($pId);
+        $product->colors = $producColortModel->getByProductId($product->id);
+
+        foreach ($product->colors as $i => $v) {
+            $product->colors[$i]->sizes = $productColorSizeModel->getByProductColorId($v->id);
+            $product->colors[$i]->images = $productColorImageModel->getByProductColorId($v->id);
+        }
+
+
+//        echo "<pre>";
+//        print_r($product);
+//        echo "</pre>";
+//        die();
+
+        $this->setView('product/product_detail', $product);
         $this->view->pageTitle = SITENAME . " - Product Detail";
         $this->view->render();
+    }
+
+    public function addToCart()
+    {
+        if (isset($_POST['product_id'])) {
+            $_SESSION['cart'][] = $_POST;
+        }
+
+        if (!isset($_SESSION['cart']) || empty($_SESSION['cart'])) {
+            $this->setView('cart');
+            $this->view->pageTitle = SITENAME . " - Cart";
+            $this->view->render();
+            return;
+        }
+
+        $totalPrice = 0;
+
+        foreach ($_SESSION['cart'] as $i => $cartItem) {
+            $totalPrice += $cartItem['product_price'];
+
+            $pc = explode(',', $cartItem['product_color']);
+            $pcs = explode(',', $cartItem['product_color_size']);
+
+            $_SESSION['cart'][$i]['product_color_id'] = $pc[0];
+            $_SESSION['cart'][$i]['product_color_name'] = $pc[1];
+
+            $_SESSION['cart'][$i]['product_color_size_id'] = $pcs[0];
+            $_SESSION['cart'][$i]['product_color_size_name'] = $pcs[1];
+
+        }
+
+        // Add shipping fee
+        $_SESSION['totalPrice'] = $totalPrice;
+        $_SESSION['totalPay'] = $totalPrice + 20;
+
+        $data['cartItems'] = $_SESSION['cart'];
+        $data['totalPrice'] =  $_SESSION['totalPrice'];
+        $data['totalPay'] =  $_SESSION['totalPay'];
+
+        $this->setView('cart', $data);
+        $this->view->pageTitle = SITENAME . " - Cart";
+        $this->view->render();
+
     }
 
 
