@@ -14,8 +14,8 @@
                </a>
                 <div class="row mt-2">
                    <div class="col-7">
-                       <a href="/product/productDetail/<?= $product->id ?>"> <?= $product->name ?> </a><br/>
-                       <span>$<?= $product->price ?></span>
+                       <a class="ml-3" href="/product/productDetail/<?= $product->id ?>"> <?= $product->name ?> </a><br/>
+                       <span class="m-3">$<?= $product->price ?></span>
                    </div>
                    <div class="col-4 my-2">
                        <?php  foreach ($product->colors as $pc): ?>
