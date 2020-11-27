@@ -20,6 +20,16 @@ class ProductColorImage
         return $this->db->single();
     }
 
+
+    public function getOneByProductColorId($pcId)
+    {
+        $sql = "SELECt * FROM product_color_imgs WHERE product_color_id=:pcId LIMIT 1";
+        $this->db->query($sql);
+        $this->db->bind(':pcId', $pcId);
+
+        return $this->db->single();
+    }
+
     public function getByProductColorId($productColorId)
     {
         $sql = "SELECT * FROM product_color_imgs WHERE product_color_id=:productColorId";
