@@ -1,7 +1,12 @@
 <?php include VIEW . 'layouts/header.php' ?>
-
+<?php // print_r($this); ?>
 <!--Start container -->
-    <div class="container cart-page">
+    <div class="container cart-page ">
+    <?php
+    if (empty($this->viewData['cartItems'])) {
+        echo "<h2 class='text-center mt-5'> Cart is empty </h2>";
+    } else {
+    ?>
         <div class="card">  <!--Start card -->
             <div class="row"> <!--Start row -->
                 <div class="col-md-8 cart"> <!-- start left side ( product list )   -->
@@ -12,33 +17,25 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row border-top border-bottom">
-                        <div class="row main align-items-center">
-                            <div class="col-2">
-                                <img class="img-fluid" src="imgs/skirts/4.jpg">
-                            </div>
-                            <div class="col">
-                                <div class="row text-muted"> A-Line Mini Skirt</div>
-                                <div class="row">Beige </div>
-                                <div class="row">Small </div>
 
-                            </div>
-                            <div class="col">$3000 <span class="close">&#10005;</span></div>
-                        </div>
-                    </div>
+                    <?php foreach($this->viewData['cartItems'] as $cartItem): ?>
+                        <div class="row border-top">
+                            <div class="row main align-items-center">
+                                <div class="col-2">
+                                    <img class="img-fluid" src="/<?= $cartItem['product_image'] ?>">
+                                </div>
+                                <div class="col">
+                                    <div class="row text-muted"> <?= $cartItem['product_name'] ?> </div>
+                                    <div class="row"> <?= $cartItem['product_color_name'] ?> </div>
+                                    <div class="row"> <?= $cartItem['product_color_size_name'] ?> </div>
 
-                    <div class="row">
-                        <div class="row main align-items-center">
-                            <div class="col-2">
-                                <img class="img-fluid" src="imgs/skirts/4.jpg"></div>
-                            <div class="col">
-                                <div class="row text-muted">Short-Sleeeved</div>
-                                <div class="row">Black</div>
-                                <div class="row">Small</div>
+                                </div>
+                                <div class="col">$ <?= $cartItem['product_price'] ?> <span class="close">&#10005;</span></div>
                             </div>
-                            <div class="col">$3000 <span class="close">&#10005;</span></div>
                         </div>
-                    </div>
+                    <?php endforeach; ?>
+
+
 
                     <div class="back-to-shop"><a href="/product/products/">&leftarrow;<span class="text-muted">Back to shop</span></a></div>
 
@@ -54,7 +51,7 @@
                     <hr>
                     <div class="row">
                         <div class="col">TOTAL</div>
-                        <div class="col text-right">$6000</div>
+                        <div class="col text-right">$<?=  $this->viewData['totalPrice'] ?></div>
                     </div>
                     <form>
                         <p>SHIPPING</p>
@@ -64,11 +61,12 @@
                     </form>
                     <div class="row">
                         <div class="col">TOTAL PRICE</div>
-                        <div class="col text-right">$6,020</div>
+                        <div class="col text-right">$<?= $this->viewData['totalPay'] ?></div>
                     </div> <a href="/home/payment" class="btn">CHECKOUT</a>
                 </div>  <!-- end  right side ( checkout )   -->
             </div> <!--end of row -->
         </div> <!--end of card -->
+    <?php } ?>
     </div> <!--end of  container -->
 
 <?php include VIEW . 'layouts/footer.php' ?>
