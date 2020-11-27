@@ -10,7 +10,7 @@ include VIEW . 'admin/layouts/sidebar.php';
         <input type="hidden" name="id" value="<?= $this->viewData->id ?>" />
 
         <div class="form-group">
-            <select class="form-control" id="color" name="size_id" required>
+            <select class="form-control" id="color" name="is_delivered" required>
                 <option value="">Set Delivery Status</option>
                 <option <?= $this->viewData->is_delivered ? '' : 'selected' ?> value="0">Pending</option>
                 <option <?= $this->viewData->is_delivered ? 'selected' : '' ?> value="1">Delivered</option>
@@ -18,7 +18,7 @@ include VIEW . 'admin/layouts/sidebar.php';
         </div>
 
         <div class="form-group">
-            <select class="form-control" id="color" name="size_id" required>
+            <select class="form-control" id="color" name="is_canceled" required>
                 <option value="">Set Order Status</option>
                 <option <?= $this->viewData->is_canceled ? 'selected' : '' ?> value="0">Canceled</option>
                 <option <?= $this->viewData->is_canceled ? '' : 'selected' ?> value="1">Active</option>
