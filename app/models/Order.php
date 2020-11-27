@@ -31,4 +31,22 @@ class Order
         return $this->db->single();
     }
 
+    public function getAll()
+    {
+        $sql = "SELECT o.*, u.name FROM orders AS o
+                JOIN users AS u 
+                ON u.id=o.user_id
+                ORDER BY o.id DESC";
+        $this->db->query($sql);
+        return $this->db->resultSet();
+    }
+
+    public function getById($id)
+    {
+        $sql = "SELECT * FROM orders WHERE id=:id";
+        $this->db->query($sql);
+        $this->db->bind(':id', $id);
+        return $this->db->single();
+    }
+
 }
