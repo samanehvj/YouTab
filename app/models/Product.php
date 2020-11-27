@@ -25,6 +25,16 @@ Class Product {
         return $this->db->single();
     }
 
+    public function getTop($number = 1)
+    {
+        $sql = "SELECt * FROM products
+                ORDER BY products.view DESC 
+                LIMIT :number";
+        $this->db->query($sql);
+        $this->db->bind(':number', $number);
+        return $this->db->resultSet();
+    }
+
     public function add($name, $price, $catId)
     {
         $sql = "INSERT INTO products 
