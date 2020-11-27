@@ -10,9 +10,7 @@
         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
         <strong>Oops!</strong> Profile not saved. Try later.
       </div>
-        <a href="#" class="btn btn-dark text-light btn-lg offset-10">
-            <span class="glyphicon glyphicon-log-out "></span> Log out
-        </a>
+
       <div class="panel-body">
         <div class="form-horizontal">
                     <form>
