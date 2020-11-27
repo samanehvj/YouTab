@@ -24,6 +24,16 @@ class ProductColorSize
         return $this->db->single();
     }
 
+    public function decrease($pcsId, $qty)
+    {
+        $sql = "UPDATE product_color_sizes set qty=qty-:qty WHERE id=:pcsId";
+        $this->db->query($sql);
+        $this->db->bind(':qty', $qty);
+        $this->db->bind(':pcsId', $pcsId);
+
+        return $this->db->execute();
+    }
+
     public function getByProductColorId($productColorId)
     {
         $sql = "SELECT pcs.*, s.name 'size_name'
