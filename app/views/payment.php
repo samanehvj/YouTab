@@ -41,12 +41,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="mt-4 mb-4 d-flex justify-content-between"> <span>Previous step</span> <button class="btn btn-dark px-3">Pay $6,020</button> </div>
+                <div class="mt-4 mb-4 d-flex justify-content-between"> <span>Previous step</span> <a href="/home/successPayment" class="btn btn-dark text-light px-3">Pay $<?= $this->viewData ?></a> </div>
             </div>
             <div class="col-md-4">
                 <div class="card card-black p-3 text-black border border-dark mb-3"> <span>You have to pay</span>
                     <div class="d-flex flex-row align-items-end mb-3">
-                        <h1 class="mb-0">$6,020</h1> <span>.99</span>
+                        <h1 class="mb-0">$<?= $this->viewData ?></h1> <span></span>
                     </div> <span>Enjoy all the features and perk after you complete the payment</span>
                     <div class="hightlight"> <span>100% Guaranteed support and update for the next 5 years.</span> </div>
                 </div>
