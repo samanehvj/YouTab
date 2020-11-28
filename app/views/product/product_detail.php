@@ -1,12 +1,14 @@
 <?php include VIEW . 'layouts/header.php' ?>
-
+<?php
+$c = (isset($_GET['color']) && !empty($_GET['color'])) ? $_GET['color'] : 0;
+?>
     <div class="container-fluid product-detail-page">
 
         <div class="row my-5">
 
             <div class="col-lg-2 order-2 order-lg-1 d-flex product-detail-thumbs ">
 
-                <?php foreach ($this->viewData->colors[0]->images as $img): ?>
+                <?php foreach ($this->viewData->colors[$c]->images as $img): ?>
 
                 <img width="100%" height="auto" src="/<?= $img->img ?>" alt="">
 
@@ -17,7 +19,7 @@
 
             <div class=" col-lg-6 order-1 order-lg-">
                 <div class="larg-cat d-flex flex-column justify-content-between h-100 mb-3 mb-lg-0 p-2  ">
-                    <img class="img-fluid w-100" src="/<?= $this->viewData->colors[0]->images[0]->img ?>">
+                    <img class="img-fluid w-100" src="/<?= $this->viewData->colors[$c]->images[0]->img ?>">
                 </div>
             </div>
 
@@ -35,14 +37,14 @@
                             <input type="hidden" name="product_name" value="<?= $this->viewData->name ?>" />
                             <input type="hidden" name="product_price" value="<?= $this->viewData->price ?>" />
                             <input type="hidden" name="product_image"
-                                   value="<?= $this->viewData->colors[0]->images[0]->img ?>"
+                                   value="<?= $this->viewData->colors[$c]->images[0]->img ?>"
                             />
 
                             <div class="form-group">
                                 <label for="size">Size</label>
                                 <select name="product_color_size" class="form-control" id="size">
 
-                                    <?php  foreach($this->viewData->colors[0]->sizes as $size): ?>
+                                    <?php  foreach($this->viewData->colors[$c]->sizes as $size): ?>
                                         <option value="<?= $size->id . "," . $size->size_name ?>">
                                             <?= $size->size_name ?>
                                         </option>
@@ -53,10 +55,13 @@
 
                             <div class="form-group">
                                 <label for="color">Color</label>
-                                <select name="product_color" class="form-control" id="color">
+                                <select onchange="ccc()" name="product_color" class="form-control" id="color" >
 
-                                    <?php  foreach($this->viewData->colors as $color): ?>
-                                        <option value="<?= $color->id . "," . $color->name ?>">
+                                    <?php  foreach($this->viewData->colors as $ci => $color): ?>
+                                        <option
+                                            <?= ($c == $ci) ? 'selected' : '' ?>
+                                            value="<?= $color->id . "," . $color->name . "," . $ci?>"
+                                        >
                                             <?= $color->name ?>
                                         </option>
                                     <?php endforeach; ?>
@@ -78,8 +83,27 @@
 
 
 
+<script>
+    function ccc() {
 
-
+        colorId = document.getElementById("color").value;
+        colorId = colorId.split(',')[2];
+        console.log(colorId);
+        // Simulate a mouse click:
+        window.location.href = '/product/productDetail/<?= $this->viewData->id ?>?color='+colorId;
+    }
+    //$('#color').on('change', function() {
+    //    colorId = document.getElementById("color").value;
+    //    colorId = colorId.split(',')[2]);
+    //    console.log(colorId);
+    //    // Simulate a mouse click:
+    //    window.location.href = '/product/productDetail/<?//= $this->viewData->id ?>//?color='+colorId;
+    //
+    //    // var url = '/product/productDetail/<?////= $this->viewData->id ?>////?color='.$(this).val();
+    //    //$(location).attr('href',url);
+    //
+    //});
+</script>
 
 
 
