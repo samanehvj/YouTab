@@ -18,7 +18,7 @@
                         </div>
                     </div>
 
-                    <?php foreach($this->viewData['cartItems'] as $cartItem): ?>
+                    <?php foreach($this->viewData['cartItems'] as $i => $cartItem): ?>
                         <div class="row border-top">
                             <div class="row main align-items-center">
                                 <div class="col-2">
@@ -30,7 +30,12 @@
                                     <div class="row"> <?= $cartItem['product_color_size_name'] ?> </div>
 
                                 </div>
-                                <div class="col">$ <?= $cartItem['product_price'] ?> <span class="close">&#10005;</span></div>
+                                <div class="col">
+                                    $ <?= $cartItem['product_price'] ?>
+                                    <a href="/product/deleteFromCart/<?= $i ?>">
+                                        <span class="close">&#10005;</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     <?php endforeach; ?>
