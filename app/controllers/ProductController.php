@@ -9,10 +9,41 @@ class ProductController extends Controller
         $productColorModel = $this->model('ProductColor');
         $productColorImageModel = $this->model('ProductColorImage');
 
+        $categoryModel = $this->model('Category');
+        $colorModel = $this->model('Color');
+
+
         $data['products'] = $productModel->getAll();
+        $data['categories'] = $categoryModel->getAll();
+        $data['colors'] = $colorModel->getAll();
+
 
         foreach ($data['products'] as $index => $product) {
+            if(isset($_GET['category'])
+                && !empty($_GET['category'])
+                && $product->category_id != $_GET['category']
+            ) {
+                unset($data['products'][$index]);
+                continue;
+            }
+
             $productColors = $productColorModel->getByProductId($product->id);
+
+            if(isset($_GET['color'])
+                && !empty($_GET['color'])
+            ) {
+                $haveThisColor = false;
+                foreach ($productColors as $i => $pc) {
+                    if($pc->color_id == $_GET['color']) {
+                        $haveThisColor = true;
+                    }
+                }
+                if (!$haveThisColor) {
+                    unset($data['products'][$index]);
+                    continue;
+                }
+            }
+
             $data['products'][$index]->colors = $productColors;
 
             $productImage = $productColorImageModel->getOneByProductColorId($productColors[0]->id);
@@ -95,6 +126,14 @@ class ProductController extends Controller
         $this->view->pageTitle = SITENAME . " - Cart";
         $this->view->render();
 
+    }
+
+    public function deleteFromCart($id = -1)
+    {
+        if(isset($_SESSION['cart'][$id])) {
+            unset($_SESSION['cart'][$id]);
+        }
+        $this->go('product', 'addToCart');
     }
 
 
