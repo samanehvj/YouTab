@@ -97,6 +97,7 @@
 
                     <div class=" col-lg-6 ">  <!--start right cat-->
                         <div class="col-12 small-cat mb-4 p-2 k">
+<!--                            <a href="/product/productDetail/--><?//= $product->id ?><!--">-->
                             <img class="img-fluid w-100" src="/<?= $this->viewData['topProducts'][4]->img ?>">
                             <h5 class="products-text mx-4 my-2">
                                 <?= $this->viewData['topProducts'][4]->name ?>
@@ -104,6 +105,7 @@
                             <h5 class="mx-4 my-2">
                                 $<?= $this->viewData['topProducts'][4]->price ?>
                             </h5>
+<!--                            </a>-->
                         </div>
                     </div>
 
