@@ -4,6 +4,26 @@
 
         <div class="row my-5 product-title"> <!--start row-->
 
+            <form class="form-inline col-12 mr-2" method="get" action="/product/products/">
+                <select name="category" class="form-control  custom-select mb-2 mr-sm-2">
+                    <option class="" value="">Filter by category</option>
+                    <?php foreach ($this->viewData['categories'] as $category): ?>
+                        <option value="<?= $category->id ?>"><?= $category->name ?></option>
+                    <?php endforeach; ?>
+                </select>
+
+                <select name="color" class="custom-select form-control mb-2 mr-sm-2">
+                    <option value="">Filter by color</option>
+                    <?php foreach ($this->viewData['colors'] as $color): ?>
+                        <option value="<?= $color->id ?>"><?= $color->name ?></option>
+                    <?php endforeach; ?>
+                </select>
+
+
+
+                <button type="submit" class="btn btn-dark text-light mb-2">Filter</button>
+            </form>
+
             <!-- start row 1  dress-->
 
             <?php foreach ($this->viewData['products'] as $product): ?>
