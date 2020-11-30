@@ -24,6 +24,7 @@ Class Product {
 
         return $this->db->single();
     }
+//create function query for get all top product order from view
 
     public function getTop($number = 1)
     {
@@ -34,6 +35,7 @@ Class Product {
         $this->db->bind(':number', $number);
         return $this->db->resultSet();
     }
+//create function query for add all product
 
     public function add($name, $price, $catId)
     {
@@ -50,6 +52,7 @@ Class Product {
 
         return $this->db->execute();
     }
+//create function query for edit all product
 
     public function edit($id, $name, $price, $catId)
     {
@@ -62,6 +65,7 @@ Class Product {
 
         return $this->db->execute();
     }
+//create function query for delete all product
 
     public function delete($id)
     {

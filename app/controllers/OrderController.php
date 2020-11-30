@@ -3,6 +3,7 @@
 
 class OrderController extends Controller
 {
+    //get function adminList
     public function adminList()
     {
         if (isset($_SESSION['userIsAdmin']) && $_SESSION['userIsAdmin']) {
@@ -17,6 +18,7 @@ class OrderController extends Controller
         }
     }
 
+    //get function adminEdit
     public function adminEdit($id = 0)
     {
         if (isset($_SESSION['userIsAdmin']) && $_SESSION['userIsAdmin'] && $id > 0) {
@@ -31,6 +33,7 @@ class OrderController extends Controller
         }
     }
 
+    //get function adminDoEdit
     public function adminDoEdit()
     {
         if (isset($_SESSION['userIsAdmin']) && $_SESSION['userIsAdmin']) {

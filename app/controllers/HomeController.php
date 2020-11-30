@@ -4,7 +4,7 @@
 //show sitename on view
 class HomeController extends Controller 
 {
-
+    //get function payment index
     public function index() 
     {
         $categoryModel = $this->model('Category');
@@ -28,7 +28,7 @@ class HomeController extends Controller
         $this->view->render();
     }
 
-    
+    //get function payment about
     public function about() 
     {
         $this->setView('about');
@@ -36,8 +36,7 @@ class HomeController extends Controller
         $this->view->render();
     }
 
-
-
+    //get function payment contact
     public function contact()
     {
         $this->setView('contact');
@@ -45,6 +44,7 @@ class HomeController extends Controller
         $this->view->render();
     }
 
+    //get function cart
     public function cart()
     {
         $this->setView('cart');
@@ -52,7 +52,7 @@ class HomeController extends Controller
         $this->view->render();
     }
 
-
+    //get function payment
     public function payment()
     {
         if (!Session::isLogin()) {
@@ -63,6 +63,7 @@ class HomeController extends Controller
         $this->view->render();
     }
 
+    //get function payment success
     public function successPayment()
     {
         if (!Session::isLogin()) {
@@ -91,6 +92,7 @@ class HomeController extends Controller
 
     }
 
+    //get function  product detail
     public function product_detail()
     {
         $this->setView(' product_detail');
@@ -98,14 +100,14 @@ class HomeController extends Controller
         $this->view->render();
     }
 
+    //get function pageNotFound
     public function pageNotFound()
     {
         $this->setView('pageNotFound');
         $this->view->render();
     }
 
-
-
+    //get function auth to understand is admin or user
     public function auth()
     {
         if (isset($_SESSION['userIsAdmin']) && $_SESSION['userIsAdmin'] && !empty($_SESSION['userId'])) {

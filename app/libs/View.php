@@ -6,12 +6,13 @@ class View
     protected $viewData;
     public $pageTitle = SITENAME;
 
+//get function __construct
     public function __construct($viewFile, $viewData)
     {
         $this->viewFile = $viewFile;
         $this->viewData = $viewData;
     }
-
+//get function render
     public function render()
     {
         $viewFile = VIEW . $this->viewFile . '.php';
@@ -19,6 +20,7 @@ class View
             include $viewFile;
         }
     }
+    //get function getAction
 
     public function getAction()
     {

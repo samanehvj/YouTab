@@ -3,6 +3,7 @@
 
 class SizeController extends Controller
 {
+//    Start admin add edit and delete for size
     public function adminList()
     {
         if (isset($_SESSION['userIsAdmin']) && $_SESSION['userIsAdmin']) {

@@ -3,6 +3,7 @@
 
 class ColorController extends Controller
 {
+    //get function adminList for color
     public function adminList()
     {
         if (isset($_SESSION['userIsAdmin']) && $_SESSION['userIsAdmin']) {
@@ -17,6 +18,7 @@ class ColorController extends Controller
         }
     }
 
+    //get function adminAdd for color
     public function adminAdd()
     {
         if (isset($_SESSION['userIsAdmin']) && $_SESSION['userIsAdmin']) {
@@ -29,6 +31,7 @@ class ColorController extends Controller
         }
     }
 
+    //get function adminDoAdd for color
     public function adminDoAdd()
     {
         if (isset($_SESSION['userIsAdmin']) && $_SESSION['userIsAdmin']) {
@@ -51,6 +54,7 @@ class ColorController extends Controller
         }
     }
 
+    //get function AdminEdit for color
     public function adminEdit($id = 0)
     {
         if (isset($_SESSION['userIsAdmin']) && $_SESSION['userIsAdmin'] && $id > 0) {
@@ -65,6 +69,7 @@ class ColorController extends Controller
         }
     }
 
+    //get function AdminDoEdit for color
     public function adminDoEdit()
     {
         if (isset($_SESSION['userIsAdmin']) && $_SESSION['userIsAdmin']) {
@@ -87,6 +92,7 @@ class ColorController extends Controller
         }
     }
 
+    //get function adminDelete for color
     public function adminDelete($id = 0)
     {
         if (isset($_SESSION['userIsAdmin']) && $_SESSION['userIsAdmin'] && $id > 0) {

@@ -3,6 +3,7 @@
 
 class CategoryController extends Controller
 {
+    //get function adminlist
     public function adminList()
     {
         if (isset($_SESSION['userIsAdmin']) && $_SESSION['userIsAdmin']) {
@@ -16,6 +17,7 @@ class CategoryController extends Controller
             $this->go('home', 'auth');
         }
     }
+    //get function adminAdd
 
     public function adminAdd()
     {
@@ -28,6 +30,7 @@ class CategoryController extends Controller
             $this->go('home', 'auth');
         }
     }
+    //get function adminDoList
 
     public function adminDoAdd()
     {
@@ -78,6 +81,8 @@ class CategoryController extends Controller
         }
     }
 
+    //get function adminEdit
+
     public function adminEdit($id = 0)
     {
         if (isset($_SESSION['userIsAdmin']) && $_SESSION['userIsAdmin'] && $id > 0) {
@@ -91,6 +96,7 @@ class CategoryController extends Controller
             $this->go('home', 'auth');
         }
     }
+    //get function adminDoEdit
 
     public function adminDoEdit()
     {
@@ -145,6 +151,7 @@ class CategoryController extends Controller
             $this->go('home', 'auth');
         }
     }
+    //get function adminDelete
 
     public function adminDelete($id = 0)
     {

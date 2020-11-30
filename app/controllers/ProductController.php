@@ -3,6 +3,7 @@
 
 class ProductController extends Controller
 {
+    //get function product
     public function products()
     {
         $productModel = $this->model('Product');
@@ -55,6 +56,7 @@ class ProductController extends Controller
         $this->view->render();
     }
 
+    //get function productDetails
     public function productDetail($pId = 0)
     {
         if( $pId == 0){
@@ -85,6 +87,7 @@ class ProductController extends Controller
         $this->view->render();
     }
 
+    //get function AddToCart
     public function addToCart()
     {
         if (isset($_POST['product_id'])) {
@@ -128,6 +131,7 @@ class ProductController extends Controller
 
     }
 
+    //get function deleteFromCart
     public function deleteFromCart($id = -1)
     {
         if(isset($_SESSION['cart'][$id])) {

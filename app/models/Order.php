@@ -9,6 +9,7 @@ class Order
     {
         $this->db = new DB;
     }
+//create function query for order to gget user id and total price
 
     public function add($userId, $price)
     {
@@ -30,6 +31,7 @@ class Order
 
         return $this->db->single();
     }
+//create function query for order getAll
 
     public function getAll()
     {
@@ -48,6 +50,7 @@ class Order
         $this->db->bind(':id', $id);
         return $this->db->single();
     }
+//create function query for order to edit delivered and cancel
 
     public function edit($id, $isDelivered, $isCanceled)
     {

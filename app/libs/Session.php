@@ -1,5 +1,6 @@
 <?php
 
+//create session for login page to know it is admin user to admin user
 
 class Session
 {

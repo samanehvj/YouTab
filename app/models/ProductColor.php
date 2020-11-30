@@ -32,6 +32,7 @@ Class ProductColor {
 
         return $this->db->single();
     }
+//create function query for color by ID
 
     public function getByColorId($colorId)
     {
@@ -46,6 +47,7 @@ Class ProductColor {
 
         return $this->db->resultSet();
     }
+//create function query for  by ID
 
     public function getById($id)
     {
@@ -63,6 +65,7 @@ Class ProductColor {
 
         return $this->db->single();
     }
+//create function query for add product by ID and color ID
 
     public function add($productId, $colorId)
     {
@@ -78,6 +81,7 @@ Class ProductColor {
 
         return $this->db->execute();
     }
+//create function query for delete by ID
 
     public function delete($id)
     {
