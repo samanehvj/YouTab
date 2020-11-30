@@ -1,11 +1,14 @@
 <?php include VIEW . 'layouts/header.php' ?>
 
+<!--start container-->
 <div class="container mb-5 payment-page">
     <div>
-        <div class="mb-4">
+        <div class="mb-4"> <!--start Confirm order -->
+
             <h2>Confirm order and pay</h2> <span>please make the payment, after that you can enjoy all the features and benefits.</span>
-        </div>
-        <div class="row">
+        </div>  <!--end Confirm order -->
+
+        <div class="row">  <!--start row -->
             <div class="col-md-8">
                 <div class="card p-3">
                     <h6 class="text-uppercase">Payment details</h6>
@@ -42,7 +45,9 @@
                     </div>
                 </div>
                 <div class="mt-4 mb-4 d-flex justify-content-between"> <span>Previous step</span> <a href="/home/successPayment" class="btn btn-dark text-light px-3">Pay $<?= $this->viewData ?></a> </div>
+
             </div>
+<!--            start Enjoy all the features-->
             <div class="col-md-4">
                 <div class="card card-black p-3 text-black border border-dark mb-3"> <span>You have to pay</span>
                     <div class="d-flex flex-row align-items-end mb-3">
@@ -51,9 +56,11 @@
                     <div class="hightlight"> <span>100% Guaranteed support and update for the next 5 years.</span> </div>
                 </div>
             </div>
-        </div>
+<!--            end Enjoy all the features-->
+        </div><!--end row -->
     </div>
 
-</div>
+</div>  <!--end container-->
+
 
 <?php include VIEW . 'layouts/footer.php' ?>

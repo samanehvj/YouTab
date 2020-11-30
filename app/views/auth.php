@@ -1,7 +1,7 @@
 <?php include VIEW . 'layouts/header.php' ?>
 
 <div class="container auth-page">
-
+<!--    start auth-page-->
     <div class=" d-flex justify-content-center mt-5 mb-5">
         <div class="w-100 bg my-5 d-flex justify-content-around flex-row flex-wrap">
             <div class="col-lg-5 bg login-text d-flex flex-column justify-content-around">
@@ -49,6 +49,9 @@
 
         </div>
     </div>
+<!--    end auth-page-->
+
+
 
 </div>
 

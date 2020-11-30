@@ -4,6 +4,8 @@ include VIEW . 'admin/layouts/header.php';
 include VIEW . 'admin/layouts/sidebar.php';
 
 ?>
+    <!--edit color from admin page -->
+
 <div class="container d-flex justify-content-around ">
     <form class="mt-5" method="post" action="/color/adminDoEdit" >
         <input type="hidden" name="id" value="<?= $this->viewData->id ?>" />

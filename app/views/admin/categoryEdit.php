@@ -4,6 +4,7 @@ include VIEW . 'admin/layouts/header.php';
 include VIEW . 'admin/layouts/sidebar.php';
 
 ?>
+<!--edit category from admin page -->
 <div class="container d-flex justify-content-around ">
     <form class="mt-5" method="post" action="/category/adminDoEdit" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<?= $this->viewData->id ?>" />
@@ -21,6 +22,8 @@ include VIEW . 'admin/layouts/sidebar.php';
                 <img src="<?= URLROOT . "/" . $this->viewData->img ?>" width="100px" />
             </a>
         </div>
+
+
 
         <div class="form-group">
             <label for="info">Description</label>

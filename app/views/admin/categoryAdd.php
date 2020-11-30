@@ -4,6 +4,7 @@ include VIEW . 'admin/layouts/header.php';
 include VIEW . 'admin/layouts/sidebar.php';
 
 ?>
+<!--add category to website from admin page -->
 <div class="container d-flex justify-content-around ">
     <form class="mt-5" method="post" action="/category/adminDoAdd" enctype="multipart/form-data">
         <div class="form-group">

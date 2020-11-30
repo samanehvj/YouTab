@@ -1,4 +1,5 @@
 <?php
+//add all defind to index.php
 session_start();
 define('SITENAME', 'YouTab Brand');
 define('URLROOT', 'http://localhost:8880');

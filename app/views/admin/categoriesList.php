@@ -16,6 +16,7 @@ include VIEW . 'admin/layouts/sidebar.php';
             </tr>
         </thead>
         <tbody>
+<!--        Get all category from db -->
             <?php foreach ($this->viewData['categories'] as $category) : ?>
                 <tr>
                     <td><?= $category->id ?></td>
