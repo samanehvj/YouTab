@@ -8,6 +8,7 @@ Class Size {
     {
         $this->db = new DB;
     }
+//create get all function for size
 
     public function getAll()
     {
@@ -38,7 +39,7 @@ Class Size {
 
         return $this->db->execute();
     }
-
+//create edit function for size
     public function edit($id, $name)
     {
         $sql = "UPDATE sizes SET  name=:name WHERE id=:id";
@@ -48,6 +49,7 @@ Class Size {
 
         return $this->db->execute();
     }
+//create delete function for size
 
     public function delete($id)
     {

@@ -4,6 +4,8 @@ include VIEW . 'admin/layouts/header.php';
 include VIEW . 'admin/layouts/sidebar.php';
 
 ?>
+    <!--edit order from admin page -->
+
 <div class="container d-flex justify-content-around ">
     <form class="mt-5" method="post" action="/order/adminDoEdit" >
     <h1 class="text-center m-5">Order Number: <?= $this->viewData->id ?></h1>

@@ -4,6 +4,8 @@ include VIEW . 'admin/layouts/header.php';
 include VIEW . 'admin/layouts/sidebar.php';
 
 ?>
+    <!-- get color list from db-->
+
 <div class="table-responsive">
     <a href="/color/adminAdd" class="btn btn-success m-5">Add Color</a>
     <table class="table table-striped table-sm">

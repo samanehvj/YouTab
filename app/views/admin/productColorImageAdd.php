@@ -7,6 +7,7 @@ include VIEW . 'admin/layouts/sidebar.php';
 <div class="container d-flex justify-content-around ">
     <form class="mt-5" method="post" action="/product/adminDoColorImageAdd" enctype="multipart/form-data">
         <input type="hidden" name="product_color_id" value="<?= $this->viewData['productColor']->id ?>" />
+        <!--add  product color image   from db in admin page  -->
 
         <div class="form-group">
             <span class="form-control">

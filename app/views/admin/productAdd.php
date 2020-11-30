@@ -9,7 +9,7 @@ include VIEW . 'admin/layouts/sidebar.php';
         <div class="form-group">
             <input class="form-control" id="name" name="name" placeholder="Product Name" required/>
         </div>
-
+        <!--add  product  from db in admin page  -->
         <div class="form-group">
             <select class="form-control" id="category" name="category" required>
                 <option value="">Choose A Category</option>

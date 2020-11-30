@@ -9,6 +9,7 @@ class ProductColorSize
     {
         $this->db = new DB;
     }
+//create function getbyid  for product color size
 
     public function getById($id)
     {

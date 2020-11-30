@@ -8,6 +8,7 @@ Class ProductColor {
     {
         $this->db = new DB;
     }
+//create function getbyproductid  for product color
 
     public function getByProductId($productId)
     {

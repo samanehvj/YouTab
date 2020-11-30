@@ -9,7 +9,7 @@ class User
     {
         $this->db = new DB;
     }
-
+//get user email fromm db
     public function getByEmail($email)
     {
         $sql = "SELECT * FROM users 

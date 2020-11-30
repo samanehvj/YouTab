@@ -9,6 +9,7 @@ class ProductColorImage
     {
         $this->db = new DB;
     }
+//create function getbyid  for product color image
 
     public function getById($id)
     {

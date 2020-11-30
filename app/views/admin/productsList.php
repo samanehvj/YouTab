@@ -4,6 +4,8 @@ include VIEW . 'admin/layouts/header.php';
 include VIEW . 'admin/layouts/sidebar.php';
 
 ?>
+    <!--get  product list  from db in admin page  -->
+
 <div class="table-responsive">
     <a href="/product/adminAdd" class="btn btn-success m-5">Add Product</a>
     <table class="table table-striped table-sm">

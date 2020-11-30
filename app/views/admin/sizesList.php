@@ -4,6 +4,8 @@ include VIEW . 'admin/layouts/header.php';
 include VIEW . 'admin/layouts/sidebar.php';
 
 ?>
+    <!--get size list from db to admin page  -->
+
 <div class="table-responsive">
     <a href="/size/adminAdd" class="btn btn-success m-5">Add size</a>
     <table class="table table-striped table-sm">

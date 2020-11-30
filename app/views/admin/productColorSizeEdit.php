@@ -8,6 +8,7 @@ include VIEW . 'admin/layouts/sidebar.php';
     <form class="mt-5" method="post" action="/product/adminDoColorSizeEdit" >
         <input type="hidden" name="product_color_size_id" value="<?= $this->viewData['productColorSize']->id ?>" />
         <input type="hidden" name="product_color_id" value="<?= $this->viewData['productColorSize']->product_color_id ?>" />
+        <!--edit  product color size in admin page  -->
 
         <div class="form-group">
             <span class="form-control">

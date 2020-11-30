@@ -7,6 +7,7 @@ include VIEW . 'admin/layouts/sidebar.php';
 <div class="container d-flex justify-content-around ">
     <form class="mt-5" method="post" action="/product/adminDoEdit" >
         <input type="hidden" name="id" value="<?= $this->viewData['product']->id ?>" />
+        <!--edit  product from db in admin page  -->
 
         <div class="form-group">
             <input value="<?= $this->viewData['product']->name ?>" class="form-control" id="name" name="name" placeholder="Product Name" required/>

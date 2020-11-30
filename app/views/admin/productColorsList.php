@@ -17,6 +17,7 @@ include VIEW . 'admin/layouts/sidebar.php';
             </tr>
         </thead>
         <tbody>
+<!--        get product color list from db -->
             <?php foreach ($this->viewData['productColors'] as $color) : ?>
                 <tr>
                     <td><?= $color->id ?></td>

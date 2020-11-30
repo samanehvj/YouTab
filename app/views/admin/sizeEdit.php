@@ -4,6 +4,8 @@ include VIEW . 'admin/layouts/header.php';
 include VIEW . 'admin/layouts/sidebar.php';
 
 ?>
+    <!--edit  size to admin page  -->
+
 <div class="container d-flex justify-content-around ">
     <form class="mt-5" method="post" action="/size/adminDoEdit" >
         <input type="hidden" name="id" value="<?= $this->viewData->id ?>" />

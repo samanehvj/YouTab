@@ -22,7 +22,9 @@ include VIEW . 'admin/layouts/sidebar.php';
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($this->viewData['productColorImages'] as $img) : ?>
+        <!--upload  product image from admin page  -->
+
+        <?php foreach ($this->viewData['productColorImages'] as $img) : ?>
                 <tr>
                     <td><?= $img->id ?></td>
                     <td>

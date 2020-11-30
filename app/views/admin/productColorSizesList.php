@@ -23,7 +23,9 @@ include VIEW . 'admin/layouts/sidebar.php';
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($this->viewData['productColorSizes'] as $colorSize) : ?>
+        <!--get product color size from db for admin page  -->
+
+        <?php foreach ($this->viewData['productColorSizes'] as $colorSize) : ?>
                 <tr>
                     <td><?= $colorSize->id ?></td>
                     <td><?= $colorSize->size_name ?></td>

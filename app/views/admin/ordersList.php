@@ -5,7 +5,7 @@ include VIEW . 'admin/layouts/sidebar.php';
 
 ?>
 <div class="table-responsive">
-
+<!--get order list from db for admin -->
     <table class="table table-striped table-sm">
         <thead>
             <tr>

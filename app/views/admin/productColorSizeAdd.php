@@ -18,6 +18,7 @@ include VIEW . 'admin/layouts/sidebar.php';
             <input type="text" class="form-control" id="qty" name="qty" placeholder="Quantity" required/>
         </div>
 
+        <!--add  product color size  from db in admin page  -->
         <div class="form-group">
             <select class="form-control" id="color" name="size_id" required>
                 <option value="">Choose A Size</option>

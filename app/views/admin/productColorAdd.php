@@ -12,7 +12,7 @@ include VIEW . 'admin/layouts/sidebar.php';
             />
             <span class="form-control"><?= $this->viewData['product']->name ?></span>
         </div>
-
+        <!--add product color  list from db for admin -->
         <div class="form-group">
             <select class="form-control" id="color" name="color_id" required>
                 <option value="">Choose A Color</option>
