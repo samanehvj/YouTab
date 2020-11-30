@@ -23,7 +23,8 @@
                     </div>
                 </div>
             </div> <!--end left cat-->
-            <div class=" col-lg-6 d-flex flex-column justify-content-between">  <!--start right cat-->
+<!--            <div class=" col-lg-6 d-flex flex-column justify-content-between">  -->
+            <div class=" col-lg-6">  <!--start right cat-->
                 <div class="col-12 small-cat mb-4 p-2 border border-dark">
                     <img class="img-fluid w-100" src="/<?= $this->viewData['topCategories'][1]->img ?>">
                     <h1 class="text-center my-3"><?= $this->viewData['topCategories'][1]->name ?></h1>
