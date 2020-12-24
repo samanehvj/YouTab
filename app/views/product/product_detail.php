@@ -41,7 +41,7 @@ $c = (isset($_GET['color']) && !empty($_GET['color'])) ? $_GET['color'] : 0;
                             />
 
                             <div class="form-group">
-                                <label for="size">Size</label>
+                                <label for="size">Sizes</label>
                                 <select name="product_color_size" class="form-control" id="size">
 
                                     <?php  foreach($this->viewData->colors[$c]->sizes as $size): ?>
